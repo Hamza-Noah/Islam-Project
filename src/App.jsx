@@ -1,11 +1,19 @@
 import { useState } from "react";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   const [count, setCount] = useState(0);
 
-  return <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sapiente iure, asperiores atque ipsum in expedita? Nisi non illum repudiandae suscipit ex ullam iusto eaque laborum in! Consequatur, delectus officiis.</>;
+  return (
+    <>
+      <section className="all-template">
+        <div className="container">
+          <Header></Header>
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default App;

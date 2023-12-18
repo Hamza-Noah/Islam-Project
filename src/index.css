@@ -35,7 +35,7 @@
 }
 
 @font-face {
-  font-family: "this";
+  font-family: "Century Gothic";
   src: url("./assets/fonts/CenturyGothic-Bold.woff2") format("woff2"),
     url("./assets/fonts/CenturyGothic-Bold.woff") format("woff");
   font-weight: bold;
@@ -56,5 +56,5 @@ a{
 }
 
 body {
-  font-family: this;
+  font-family: "Century Gothic";
 }

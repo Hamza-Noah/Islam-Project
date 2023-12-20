@@ -20,12 +20,12 @@ function App() {
         }}
         className="all-template"
       >
-        <button onClick={() => dispatch(changeThemeToDark())}>
-          <h1>dark mode</h1>
-        </button>
         <Header />
         <Landing />
       </section>
+        <button className="change-theme" onClick={() => dispatch(changeThemeToDark())}>
+          <h1>dark mode</h1>
+        </button>
     </>
   );
 }

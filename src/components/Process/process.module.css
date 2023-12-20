@@ -1,12 +1,13 @@
 .title {
-  font-size: 32px;
+  font-size: 50px;
   font-weight: bolder;
   color: #9da1b2;
 }
 
 .title img {
-  height: 14px;
+  height: 16px;
   vertical-align: bottom;
+  margin-left: 20px;
 }
 
 .processes {

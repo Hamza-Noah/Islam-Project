@@ -1,0 +1,58 @@
+.projects .item{
+    padding: 10px;
+}
+
+.projects img{
+    border-radius: 5px;
+
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #9da1b2;
+}
+
+.title img {
+    height: 16px;
+    vertical-align: bottom;
+    margin-left: 20px;
+  }
+
+
+  /* projects.module.css */
+
+.item {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .owl-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  
+  .owl-carousel .owl-nav button {
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #000; /* Adjust the color according to your design */
+  }
+  
+  .owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    left: 10px;
+  }
+  
+  .owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    right: 10px;
+  }
+  

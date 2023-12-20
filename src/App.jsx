@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 
+import { changeThemeToDark, darkMode } from "./components/RTK/slice";
+import { useDispatch, useSelector } from "react-redux";
+
 import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Skillset from "./components/Skillset";
 import Process from "./components/Process";
-
-import { changeThemeToDark, darkMode } from "./components/RTK/slice";
-import { useDispatch, useSelector } from "react-redux";
+import Projects from "./components/Projects";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,6 +29,7 @@ function App() {
         <Landing />
         <Skillset />
         <Process />
+        <Projects />
       </section>
       <button
         className="change-theme"

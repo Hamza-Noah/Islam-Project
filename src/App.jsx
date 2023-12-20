@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./App.css";
+
 import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Skillset from "./components/Skillset";
+import Process from "./components/Process";
 
 import { changeThemeToDark, darkMode } from "./components/RTK/slice";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,6 +27,7 @@ function App() {
         <Header />
         <Landing />
         <Skillset />
+        <Process />
       </section>
       <button
         className="change-theme"

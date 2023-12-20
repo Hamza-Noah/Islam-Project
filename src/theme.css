@@ -1,0 +1,29 @@
+/* Light Theme */
+:root {
+  --primary-color: #396C54;
+  --secondary-color: #CF755A;
+  --primary-text-color: #73827B;
+  --secondary-text-color: #F1ECDA;
+  --what-next-bg: #d8d5bf;
+  --what-next-icon-bg: #aec1ba;
+  /* ... other color variables */
+}
+
+/* Dark Theme */
+:root.dark {
+  --primary-color: #ffffff;
+  --secondary-color: #074AFF;
+  --primary-text-color: #707070;
+  --secondary-text-color: #F1ECDA;
+  --what-next-bg: #000000;
+  --what-next-icon-bg: #262626;
+  /* ... other color variables */
+}
+
+/* Shared Styles */
+body {
+  background-color: var(--what-next-bg);
+  color: var(--primary-text-color);
+}
+
+/* Add more styles as needed using the custom properties */

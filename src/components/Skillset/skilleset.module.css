@@ -1,0 +1,13 @@
+.special-color {
+  color: #fa1772;
+  font-size: 18px;
+}
+
+.title-color {
+  color: #9da1b2;
+  font-size: 50px;
+}
+
+.info p{
+    line-height: 1.7;
+}

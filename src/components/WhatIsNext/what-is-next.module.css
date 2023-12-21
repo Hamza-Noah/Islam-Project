@@ -1,0 +1,24 @@
+.what-next {
+  background-color: #24262b;
+  padding: 150px 0 90px;
+  P:not(hgroup p) {
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    @media (min-width: 992px) {
+      width: 50%;
+      margin-inline: auto;
+    }
+  }
+}
+
+.special-color {
+  color: #fa1772;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #9da1b2;
+  margin-bottom: 70px;
+}

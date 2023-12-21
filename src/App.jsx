@@ -11,6 +11,7 @@ import Process from "./components/Process";
 import Projects from "./components/Projects";
 import Careers from "./components/Careers";
 import About from "./components/About";
+import WhatNext from "./components/WhatIsNext/WhatIsNext";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -34,6 +35,7 @@ function App() {
         <Projects />
         <Careers />
         <About />
+        <WhatNext />
       </section>
       <button
         className="change-theme"

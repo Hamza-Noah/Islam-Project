@@ -9,7 +9,8 @@ import Landing from "./components/Landing";
 import Skillset from "./components/Skillset";
 import Process from "./components/Process";
 import Projects from "./components/Projects";
-import Careers from "./components/Careers/Careers";
+import Careers from "./components/Careers";
+import About from "./components/About";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,6 +33,7 @@ function App() {
         <Process />
         <Projects />
         <Careers />
+        <About />
       </section>
       <button
         className="change-theme"

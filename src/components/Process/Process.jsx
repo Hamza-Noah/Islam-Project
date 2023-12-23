@@ -15,7 +15,7 @@ export default function Process() {
           <div className={`${styles["processes"]} row pt-5 mt-5`}>
             <div className="col-lg-6">
               <div className={`${styles.process}`}>
-                <h3 data-process="01">Make it</h3>
+                <h3 data-process="01"><span>Make it</span></h3>
                 <p>
                   I sketch wireframes and make prototypes. Talking through
                   tactile designs existing in the browser is worth its weight.
@@ -24,9 +24,9 @@ export default function Process() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-xl-6">
               <div className={`${styles.process}`}>
-                <h3 data-process="02">Accessible FTW</h3>
+                <h3 data-process="02"><span>Accessible FTW</span></h3>
                 <p>
                   I sketch wireframes and make prototypes. Talking through
                   tactile designs existing in the browser is worth its weight.
@@ -35,9 +35,9 @@ export default function Process() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-xl-6">
               <div className={`${styles.process}`}>
-                <h3 data-process="03">Collaborate</h3>
+                <h3 data-process="03"><span>Collaborate</span></h3>
                 <p>
                   I sketch wireframes and make prototypes. Talking through
                   tactile designs existing in the browser is worth its weight.
@@ -46,9 +46,9 @@ export default function Process() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-xl-6">
               <div className={`${styles.process}`}>
-                <h3 data-process="04">Keep Expirementing</h3>
+                <h3 data-process="04"><span>Keep Expirementing</span></h3>
                 <p>
                   I sketch wireframes and make prototypes. Talking through
                   tactile designs existing in the browser is worth its weight.

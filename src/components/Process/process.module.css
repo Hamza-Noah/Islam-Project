@@ -12,14 +12,28 @@
 
 .processes {
   .process {
+    @media (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-inline: 40px;
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-inline: 50px;
+    }
     margin-bottom: 30px;
     h3 {
       font-size: 24px;
       font-weight: bolder;
       color: #9da1b2;
       margin-bottom: 30px;
+    }
+
+    h3 span {
       position: relative;
-      z-index: 2;
     }
 
     h3:before {
@@ -28,11 +42,15 @@
       font-size: 90px;
       transform: translate(-50%, -40%);
       color: #191f34;
-      z-index: 1;
     }
 
     p {
       color: white;
+      line-height: 1.7;
+      @media (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 100px;
+      }
+      font-weight: 600;
     }
   }
 }

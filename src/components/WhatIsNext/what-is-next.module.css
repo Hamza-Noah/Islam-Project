@@ -22,3 +22,21 @@
   color: #9da1b2;
   margin-bottom: 70px;
 }
+
+.social-links {
+  margin-top: 60px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #45464b;
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+  img {
+    height: 30px ;
+  }
+}

@@ -1,33 +1,38 @@
 .landing {
-  height: calc(100vh - 85px);
+  min-height: calc(100vh - 85px);
   background-image: url("../../assets/images/svg/banner.png");
   background-repeat: no-repeat;
-  background-position: right top ;
+  background-position: right top;
   background-size: contain;
 
-  .bow{
+  .bow {
     font-size: 20px;
   }
 
-  .designer-name{
-    font-size: 60px;
+  .designer-name {
+    font-size: 6rem;
     font-weight: bolder;
-    color: #9DA1B2;
+    color: #9da1b2;
+    white-space: nowrap;
+    transform: translate(-7px);
   }
 
-  .details{
-    font-size: 16px;
-    font-weight: bolder;
+  .details {
+    font-size: 1.25rem;
   }
 }
 
+.job-title {
+  font-family: "Segoe UI";
+  font-weight: 900;
+  transform: translate(15px, -30px);
+}
+
 @media (min-width: 1200px) {
-  .job-title{
-    font-size: 90px;
-    color: #191F34;
+  .job-title {
+    font-size: 7rem;
+    color: #191f34;
     font-weight: bolder;
     top: 0;
   }
-
-
 }

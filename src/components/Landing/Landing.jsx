@@ -5,8 +5,8 @@ export default function Landing() {
     <div className="container">
       <section className={styles.landing}>
         <div className="row">
-          <div className="col-lg-6">
-            <div className="info position-relative pt-5 text-white">
+          <div className="col-lg-6 pt-5">
+            <div className="info position-relative pt-5 mt-5 text-white">
               <p
                 className={`${styles["job-title"]}  position-absolute d-none d-lg-flex  flex-column`}
               >
@@ -16,7 +16,7 @@ export default function Landing() {
               <div className="position-relative">
                 <p className={`${styles.bow} fw-bolder`}>Hello it's me</p>
                 <h1 className={`${(styles.title, styles["designer-name"])} `}>
-                  Essam Abass
+                  Eslam Abbas
                 </h1>
                 <p className={styles.details}>
                   An enthusiastic product designer currently shaping the future
@@ -25,6 +25,7 @@ export default function Landing() {
                   traveling around the world.
                 </p>
               </div>
+              <a href="#skillset" className={`text-uppercase`}>scroll for more</a>
             </div>
           </div>
           <div className="col"></div>

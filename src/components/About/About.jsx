@@ -3,7 +3,7 @@ import styles from "./about.module.css";
 export default function About() {
   return (
     <>
-      <div className="container mt-5 pt-5">
+      <div className="container my-5 py-5">
         <div className="row">
           <div className="col-lg-6">
             <div className="info-breadcrumb">
@@ -21,7 +21,7 @@ export default function About() {
             </div>
           </div>
           <div className="col-lg-6">
-            <div className="info-details text-white fw-bolder">
+            <div className={`${styles['info-details']} text-white pe-5`}>
               <p>
                 I’ve always been passionate about pixels and design projects and
                 haven’t stopped working and learning about new technologies .

@@ -6,9 +6,15 @@ import socialIcon4 from "../../assets/images/svg/social-icon-4.svg";
 import socialIcon5 from "../../assets/images/svg/social-icon-5.svg";
 import socialIcon6 from "../../assets/images/svg/social-icon-6.svg";
 
-
 export default function WhatNext() {
-  let socialIcons = [socialIcon1, socialIcon2, socialIcon3, socialIcon4, socialIcon5, socialIcon6];
+  let socialIcons = [
+    socialIcon1,
+    socialIcon2,
+    socialIcon3,
+    socialIcon4,
+    socialIcon5,
+    socialIcon6,
+  ];
 
   return (
     <section className={`${styles["what-next"]} text-center`}>
@@ -29,9 +35,15 @@ export default function WhatNext() {
         </p>
         <div className={`${styles["social-links"]}`}>
           <ul className="d-flex justify-content-center list-unstyled">
-           {socialIcons.map((socialIcon, i) => {
-           return <li className={styles.icon} key={i}><a href="#"><img src={socialIcon}/></a></li>
-           })}
+            {socialIcons.map((socialIcon, i) => {
+              return (
+                <li className={styles.icon} key={i}>
+                  <a href="#">
+                    <img src={socialIcon} />
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

@@ -27,14 +27,17 @@ export default function Projects() {
     // Initialize Owl Carousel once scripts are loaded
     script2.onload = () => {
       $(".owl-carousel").owlCarousel({
-        items: 1, // Set the number of items to 1
+        items: 1,
         loop: false,
-        margin: 0, // Set margin to 0
+        margin: 0,
         nav: true,
+        dots: true,
         navText: [
           "<button class='owl-prev'><i class='fas fa-chevron-left'></i></button>",
           "<button class='owl-next'><i class='fas fa-chevron-right'></i></button>",
         ],
+        autoplay: true,
+        autoplayTimeout: 5000, // Set the autoplay timeout to 3000 milliseconds (3 seconds)
       });
     };
   }, []);

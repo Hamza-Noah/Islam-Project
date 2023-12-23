@@ -10,12 +10,12 @@
   margin-left: 20px;
 }
 
-.roles > div{
+.roles > div {
   position: relative;
   padding-left: 30px;
 }
 
-.roles > div::before{
+.roles > div::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -23,7 +23,6 @@
   transform: translate(-50%, -50%);
   height: 40px;
   width: 8px;
-
   background-repeat: no-repeat;
   background-image: url("../../assets/images/svg/role.svg");
 }
@@ -37,14 +36,21 @@
   font-weight: 900;
 }
 
+.roles p,
+.roles h3 {
+  margin: 0;
+}
+
+.roles p {
+  font-weight: lighter;
+}
+
 .roles .role-name {
   color: white !important;
-  font-weight: 600;
+  font-size: 1.125rem;
 }
 
 .role-name + p {
   font-size: 14px !important;
   color: #707070;
 }
-
-

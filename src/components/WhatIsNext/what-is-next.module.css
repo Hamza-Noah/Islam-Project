@@ -1,6 +1,6 @@
 .what-next {
   background-color: #24262b;
-  padding: 150px 0 90px;
+  padding: 100px 0 90px;
   P:not(hgroup p) {
     color: white;
     font-weight: bolder;
@@ -25,6 +25,10 @@
 
 .social-links {
   margin-top: 60px;
+
+  li:nth-child(3) img{
+    width: 42px;
+  }
 }
 
 .icon {
@@ -37,6 +41,10 @@
   width: 60px;
   margin-right: 10px;
   img {
-    height: 30px ;
+    height: 35px ;
   }
+
+ 
+  
+
 }

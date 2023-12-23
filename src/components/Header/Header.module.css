@@ -1,18 +1,34 @@
-.header{
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+
+.header {
   margin-bottom: 51px;
 }
 
 .logo {
-  height: 40px;
+  height: 50px;
+  position: fixed;
+  top: 35px;
+  z-index: 3;
 }
 
 .hire-me-btn {
-    color: #fff;
-    background-color: #3a3d49;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 15px;
-    font-weight: bold;
-    
+  color: #fff;
+  background-color: #3a3d49;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-family: 'Noto Sans', sans-serif;
+  position: relative;
+  z-index: 10;
+  font-size: 1.125rem;
 }
 
+.overlay-on-scroll {
+  background: linear-gradient(180deg, rgba(23, 27, 41, 0) 0%, #171b29 100%);
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  transform: rotate(180deg);
+}

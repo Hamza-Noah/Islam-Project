@@ -1,22 +1,23 @@
 import React from "react";
 import logo from "../../assets/images/svg/logo-blue.svg";
-import style from "./Header.module.css";
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <section className={`${style.header}`}>
+    <section className={`${styles.header}`}>
       <div className="container">
-        <div className=" d-flex justify-content-between align-items-center">
+        <div className="d-flex justify-content-between align-items-center">
           <div className="logo">
             <a href="#">
-              <img className={style.logo} src={logo} alt="" />
+              <img className={styles.logo} src={logo} alt="" />
             </a>
           </div>
           <div className="hire-me">
-            <button className={style["hire-me-btn"]}>Hire Me</button>
+            <button className={styles["hire-me-btn"]}>Hire Me</button>
           </div>
         </div>
       </div>
+      <div className={`${styles["overlay-on-scroll"]}`}></div>
     </section>
   );
 }

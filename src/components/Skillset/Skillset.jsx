@@ -3,7 +3,7 @@ import styles from "./skilleset.module.css";
 export default function Skillset() {
   return (
     <>
-      <section id="skillset" className="mt-5 pt-5"> 
+      <section id="skillset" className={`${styles.skillset}`}> 
         <div className="container">
           <div className="row">
             <div className="col-lg-6">

@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import plusIcon from "../../assets/images/svg/plus-icon.svg";
-import styles from "./projects.module.css";
+import activeDot from "../../assets/images/active-item.png";
+import unactiveDot from "../../assets/images/unactive-item.png";
+
 import project1 from "../../assets/images/project-1.jpg";
 import project2 from "../../assets/images/project-2.jpg";
 import project3 from "../../assets/images/project-3.jpg";
 import project4 from "../../assets/images/project-4.jpg";
 import project5 from "../../assets/images/project-5.jpg";
 import project6 from "../../assets/images/project-6.jpg";
+
+import styles from "./projects.module.css";
 
 export default function Projects() {
   useEffect(() => {
@@ -30,17 +34,26 @@ export default function Projects() {
         items: 1,
         loop: false,
         margin: 0,
-        nav: true,
-        dots: true,
-        navText: [
-          "<button class='owl-prev'><i class='fas fa-chevron-left'></i></button>",
-          "<button class='owl-next'><i class='fas fa-chevron-right'></i></button>",
-        ],
         autoplay: true,
         autoplayTimeout: 5000, // Set the autoplay timeout to 3000 milliseconds (3 seconds)
+        onDragged: handleDragged,
+        dots: false,
+        nav: false
       });
     };
   }, []);
+
+  const [active, setActive] = useState(0);
+
+  const handleDragged = (event) => {
+    const currentItemIndex = event.item.index;
+    console.log("Current Item Index:", currentItemIndex);
+    if (currentItemIndex == 1) {
+      setActive(1);
+    } else {
+      setActive(0);
+    }
+  };
 
   return (
     <section className={`${styles.projects} mt-5 pt-5`}>
@@ -85,8 +98,27 @@ export default function Projects() {
             </div>
           </div>
         </div>
-
-        <a href="#skillset" className={`text-uppercase ${styles["link-to"]}`}>my behance</a>
+        <div
+          className={`${styles.dots} dots d-flex justify-content-center mx-auto`}
+        >
+          <button className="btn p-0 pe-1">
+            {active ? (
+              <img className={styles["btn-dot"]} src={unactiveDot} alt="" />
+            ) : (
+              <img className={styles["btn-dot"]} src={activeDot} alt="" />
+            )}
+          </button>
+          <button className="btn p-0 ps-1">
+            {active ? (
+              <img className={styles["btn-dot"]} src={activeDot} alt="" />
+            ) : (
+              <img className={styles["btn-dot"]} src={unactiveDot} alt="" />
+            )}
+          </button>
+        </div>
+        <a href="#skillset" className={`text-uppercase ${styles["link-to"]}`}>
+          my behance
+        </a>
       </div>
     </section>
   );

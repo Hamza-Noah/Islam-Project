@@ -32,7 +32,7 @@
   word-spacing: 3px;
   letter-spacing: 3px;
   transition: all ease-in 0.3s;
-  transform: translateY(-250px);
+  transform: translateY(-180px);
   z-index: 3;
   &::after {
     content: "";
@@ -70,4 +70,21 @@
       left: 0;
     }
   }
+}
+
+.dots{
+  transform: translateY(50px);
+  position: relative;
+  z-index: 5;
+  &:focus{
+    border: none;
+    outline: none;
+  }
+  button{
+    cursor: pointer;
+  }
+}
+
+.btn-dot {
+  height: 24px;
 }

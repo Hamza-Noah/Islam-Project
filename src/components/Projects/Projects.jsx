@@ -35,19 +35,24 @@ export default function Projects() {
         loop: false,
         margin: 0,
         autoplay: true,
-        autoplayTimeout: 5000, // Set the autoplay timeout to 3000 milliseconds (3 seconds)
+        autoplaySpeed: 10000, // Set the autoplay speed to 10000 milliseconds (10 seconds)
         onDragged: handleDragged,
         dots: false,
-        nav: false
+        nav: false,
+        animateOut: 'fadeOut'
       });
     };
   }, []);
+
+  const goToSlide = (index) => {
+    $(".owl-carousel").trigger("to.owl.carousel", [index, 300]); // Change 300 to the desired animation speed in milliseconds
+    setActive(index);
+  };
 
   const [active, setActive] = useState(0);
 
   const handleDragged = (event) => {
     const currentItemIndex = event.item.index;
-    console.log("Current Item Index:", currentItemIndex);
     if (currentItemIndex == 1) {
       setActive(1);
     } else {
@@ -101,14 +106,14 @@ export default function Projects() {
         <div
           className={`${styles.dots} dots d-flex justify-content-center mx-auto`}
         >
-          <button className="btn p-0 pe-1">
+          <button className="btn p-0 pe-1"onClick={() => goToSlide(0)}>
             {active ? (
               <img className={styles["btn-dot"]} src={unactiveDot} alt="" />
             ) : (
               <img className={styles["btn-dot"]} src={activeDot} alt="" />
             )}
           </button>
-          <button className="btn p-0 ps-1">
+          <button className="btn p-0 ps-1" onClick={() => goToSlide(1)}>
             {active ? (
               <img className={styles["btn-dot"]} src={activeDot} alt="" />
             ) : (

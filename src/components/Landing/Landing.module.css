@@ -10,11 +10,15 @@
   }
 
   .designer-name {
-    font-size: 6rem;
     font-weight: bolder;
     color: #9da1b2;
     white-space: nowrap;
+    font-size: 4rem;
     transform: translate(-7px);
+    @media (min-width: 992px) {
+    font-size: 6rem;
+      
+    }
   }
 
   .details {

@@ -17,11 +17,16 @@ export default function About() {
                   Solving
                 </h2>
               </hgroup>
-              <a href="#" className={styles.link}>Follow Me On Instagram</a>
+              <a
+                href="#skillset"
+                className={`text-uppercase ${styles["link-to"]}`}
+              >
+                Follow Me On Instagram
+              </a>
             </div>
           </div>
           <div className="col-lg-6">
-            <div className={`${styles['info-details']} text-white pe-5`}>
+            <div className={`${styles["info-details"]} text-white pe-5`}>
               <p>
                 I’ve always been passionate about pixels and design projects and
                 haven’t stopped working and learning about new technologies .

@@ -25,7 +25,7 @@ export default function Landing() {
                   traveling around the world.
                 </p>
               </div>
-              <a href="#skillset" className={`text-uppercase`}>scroll for more</a>
+              <a href="#skillset" className={`text-uppercase ${styles["link-to"]}`}>scroll for more</a>
             </div>
           </div>
           <div className="col"></div>

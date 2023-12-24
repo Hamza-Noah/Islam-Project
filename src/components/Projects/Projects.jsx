@@ -85,6 +85,8 @@ export default function Projects() {
             </div>
           </div>
         </div>
+
+        <a href="#skillset" className={`text-uppercase ${styles["link-to"]}`}>my behance</a>
       </div>
     </section>
   );

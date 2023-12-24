@@ -37,12 +37,12 @@ function App() {
         <About />
         <WhatNext />
       </section>
-      <button
+      {/* <button
         className="change-theme"
         onClick={() => dispatch(changeThemeToDark())}
       >
         <h1>dark mode</h1>
-      </button>
+      </button> */}
     </>
   );
 }

@@ -121,7 +121,7 @@ export default function Projects() {
             )}
           </button>
         </div>
-        <a href="#skillset" className={`text-uppercase ${styles["link-to"]}`}>
+        <a href="https://www.behance.net/samo_abbas19" target="_blank" className={`text-uppercase ${styles["link-to"]}`}>
           my behance
         </a>
       </div>

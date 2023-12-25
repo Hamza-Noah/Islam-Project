@@ -26,7 +26,7 @@ export default function WhatNext() {
   ];
 
   return (
-    <section className={`${styles["what-next"]} text-center`}>
+    <section id="hire-me" className={`${styles["what-next"]} text-center`}>
       <div className="container">
         <hgroup>
           <p className={`${styles["special-color"]} text-uppercase fw-bolder`}>

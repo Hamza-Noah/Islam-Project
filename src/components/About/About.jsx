@@ -18,7 +18,7 @@ export default function About() {
                 </h2>
               </hgroup>
               <a
-                href="#skillset"
+                href="https://instagram.com/samo.abbes98?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"
                 className={`text-uppercase ${styles["link-to"]}`}
               >
                 Follow Me On Instagram

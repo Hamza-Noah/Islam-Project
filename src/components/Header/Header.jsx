@@ -13,7 +13,7 @@ export default function Header() {
             </a>
           </div>
           <div className="hire-me">
-            <button className={styles["hire-me-btn"]}>Hire Me</button>
+            <a href="#hire-me" className={styles["hire-me-btn"]}>Hire Me</a>
           </div>
         </div>
       </div>

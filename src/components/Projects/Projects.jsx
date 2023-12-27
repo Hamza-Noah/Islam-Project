@@ -34,12 +34,11 @@ export default function Projects() {
         items: 1,
         loop: false,
         margin: 0,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 10000, // Set the autoplay speed to 10000 milliseconds (10 seconds)
         onDragged: handleDragged,
         dots: false,
         nav: false,
-        animateOut: 'fadeOut'
       });
     };
   }, []);
@@ -73,15 +72,34 @@ export default function Projects() {
           <div className="item">
             <div className="porjects">
               <div className="d-flex">
-                <div className="d-flex align-items-center p-2">
-                  <img src={project1} alt="" />
+                <div className="position-relative d-flex align-items-center p-2">
+                  <div className=" position-relative">
+                    <img src={project1} alt="" />
+                    <div className={`${styles.overlay} position-absolute`}>
+                      <h3 className={`${styles["project-title"]}`}>Steocell</h3>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <div className="p-2">
-                    <img src={project2} alt="" />
+                    <div className=" position-relative">
+                      <img src={project2} alt="" />
+                      <div className={`${styles.overlay} position-absolute`}>
+                        <h3 className={`${styles["project-title"]}`}>
+                          Werlton
+                        </h3>
+                      </div>
+                    </div>
                   </div>
                   <div className="p-2">
-                    <img src={project6} alt="" />
+                    <div className=" position-relative">
+                      <img src={project6} alt="" />
+                      <div className={`${styles.overlay} position-absolute`}>
+                        <h3 className={`${styles["project-title"]}`}>
+                          Xchangewise
+                        </h3>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -90,14 +108,29 @@ export default function Projects() {
           <div className="item">
             <div className="d-flex">
               <div className="d-flex align-items-center p-2">
-                <img src={project4} alt="" />
+                <div className=" position-relative">
+                  <img src={project4} alt="" />
+                  <div className={`${styles.overlay} position-absolute`}>
+                    <h3 className={`${styles["project-title"]}`}>Ai Group</h3>
+                  </div>
+                </div>
               </div>
               <div>
                 <div className="p-2">
-                  <img src={project5} alt="" />
+                  <div className=" position-relative">
+                    <img src={project5} alt="" />
+                    <div className={`${styles.overlay} position-absolute`}>
+                      <h3 className={`${styles["project-title"]}`}>UAE</h3>
+                    </div>
+                  </div>
                 </div>
                 <div className="p-2">
-                  <img src={project3} alt="" />
+                  <div className=" position-relative">
+                    <img src={project3} alt="" />
+                    <div className={`${styles.overlay} position-absolute`}>
+                      <h3 className={`${styles["project-title"]}`}>Neomed</h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,7 +139,7 @@ export default function Projects() {
         <div
           className={`${styles.dots} dots d-flex justify-content-center mx-auto`}
         >
-          <button className="btn p-0 pe-1"onClick={() => goToSlide(0)}>
+          <button className="btn p-0 pe-1" onClick={() => goToSlide(0)}>
             {active ? (
               <img className={styles["btn-dot"]} src={unactiveDot} alt="" />
             ) : (
@@ -121,7 +154,11 @@ export default function Projects() {
             )}
           </button>
         </div>
-        <a href="https://www.behance.net/samo_abbas19" target="_blank" className={`text-uppercase ${styles["link-to"]}`}>
+        <a
+          href="https://www.behance.net/samo_abbas19"
+          target="_blank"
+          className={`text-uppercase ${styles["link-to"]}`}
+        >
           my behance
         </a>
       </div>

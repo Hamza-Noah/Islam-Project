@@ -3,7 +3,7 @@ import plusIcon from "../../assets/images/svg/plus-icon.svg";
 
 export default function Careers() {
   return (
-    <section>
+    <section className={styles.careers}>
       <div className="container">
         <h2 className={`${styles.title} mb-5`}>
           Careers

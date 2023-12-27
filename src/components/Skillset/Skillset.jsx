@@ -24,7 +24,7 @@ export default function Skillset() {
             </div>
             <div className="col-lg-6">
               <div className={`${styles.info}`}>
-                <p className="text-white pe-lg-5">
+                <p className="text-white pe-lg-5 text-center text-lg-start">
                   I specialize in building complex web applications, leading
                   front-end teams, digital product design and developing visual
                   design systems. I enjoy creating effortless user experience

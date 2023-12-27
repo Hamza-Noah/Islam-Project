@@ -6,7 +6,7 @@ export default function Landing() {
       <section className={styles.landing}>
         <div className="row">
           <div className="col-lg-6 pt-5">
-            <div className="info position-relative pt-5 mt-5 text-white">
+            <div className={`${styles.info} position-relative pt-5 mt-5 text-white`}>
               <p
                 className={`${styles["job-title"]}  position-absolute d-none d-lg-flex  flex-column`}
               >

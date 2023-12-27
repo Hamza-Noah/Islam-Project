@@ -5,6 +5,7 @@ import socialIcon3 from "../../assets/images/svg/social-icon-3.svg";
 import socialIcon4 from "../../assets/images/svg/social-icon-4.svg";
 import socialIcon5 from "../../assets/images/svg/social-icon-5.svg";
 import socialIcon6 from "../../assets/images/svg/social-icon-6.svg";
+import arrowRight from "../../assets/images/svg/arrow-right.svg";
 
 export default function WhatNext() {
   const socialIcons = [
@@ -54,6 +55,11 @@ export default function WhatNext() {
               );
             })}
           </ul>
+        </div>
+        <div className={`${styles["mail-link"]}`}>
+          <a href="https://forms.gle/Gow1qUDppr7H42h69" target="_blank" className={`${styles["link-to"]} text-uppercase mx-auto mt-5`}>
+            write me an email <img src={arrowRight} alt="" />
+          </a>
         </div>
       </div>
     </section>

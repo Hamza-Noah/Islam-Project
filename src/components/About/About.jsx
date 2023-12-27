@@ -26,7 +26,7 @@ export default function About() {
             </div>
           </div>
           <div className="col-lg-6">
-            <div className={`${styles["info-details"]} text-white pe-5`}>
+            <div className={`${styles["info-details"]} text-white pe-lg-5`}>
               <p>
                 I’ve always been passionate about pixels and design projects and
                 haven’t stopped working and learning about new technologies .

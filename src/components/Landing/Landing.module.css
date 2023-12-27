@@ -8,18 +8,25 @@
   .bow {
     font-size: 20px;
   }
+  @media (max-width: 767px) {
+    padding-top: 240px;
+    .bow {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
 
   .designer-name {
     font-weight: bolder;
     color: #9da1b2;
     white-space: nowrap;
-    font-size: 4rem;
     transform: translate(-7px);
     font-size: 3rem;
 
-    @media (min-width: 425px) {
-      font-size: 4rem;
+    @media (max-width: 767px) {
+      text-align: center;
     }
+
     @media (min-width: 992px) {
       font-size: 6rem;
     }
@@ -27,6 +34,9 @@
 
   .details {
     font-size: 1.25rem;
+    @media (max-width: 991px) {
+      text-align: center;
+    }
   }
 }
 
@@ -56,6 +66,10 @@
   word-spacing: 3px;
   letter-spacing: 3px;
   transition: all ease-in 0.3s;
+  @media (max-width: 767px) {
+    margin-inline: auto;
+
+  }
   &::after {
     content: "";
     position: absolute;

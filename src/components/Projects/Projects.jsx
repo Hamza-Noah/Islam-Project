@@ -71,7 +71,7 @@ export default function Projects() {
         <div className="owl-carousel">
           <div className="item">
             <div className="porjects">
-              <div className="d-flex">
+              <div className="d-flex flex-column flex-md-row">
                 <div className="position-relative d-flex align-items-center p-2">
                   <div className=" position-relative">
                     <img src={project1} alt="" />
@@ -106,7 +106,7 @@ export default function Projects() {
             </div>
           </div>
           <div className="item">
-            <div className="d-flex">
+            <div className="d-flex flex-column flex-md-row">
               <div className="d-flex align-items-center p-2">
                 <div className=" position-relative">
                   <img src={project4} alt="" />

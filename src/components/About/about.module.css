@@ -1,11 +1,18 @@
 .special-color {
   color: #fa1772;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .title {
   font-size: 50px;
   font-weight: bolder;
-  color: #9da1b2;
+  color: #fff;
+  @media (max-width: 767px) {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 
 .link {
@@ -20,6 +27,11 @@
 
 .info-details {
   font-size: 1.125rem;
+  @media (max-width: 767px) {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 !important;
+  }
 }
 
 .link-to {
@@ -33,6 +45,10 @@
   word-spacing: 3px;
   letter-spacing: 3px;
   transition: all ease-in 0.3s;
+  @media (max-width: 767px) {
+    font-size: 0.9rem;
+    margin: 20px auto 30px;
+  }
   &::after {
     content: "";
     position: absolute;

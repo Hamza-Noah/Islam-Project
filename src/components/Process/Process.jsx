@@ -4,7 +4,7 @@ import plusIcon from "../../assets/images/svg/plus-icon.svg";
 export default function Process() {
   return (
     <>
-      <section className="mt-5 pt-5">
+      <section id="process" className="mt-5 pt-5">
         <div className="container">
           <h2 className={`${styles.title}`}>
             Process{" "}
@@ -24,7 +24,7 @@ export default function Process() {
                 </p>
               </div>
             </div>
-            <div className="col-xl-6">
+            <div className="col-lg-6">
               <div className={`${styles.process}`}>
                 <h3 data-process="02"><span>Accessible FTW</span></h3>
                 <p>
@@ -35,7 +35,7 @@ export default function Process() {
                 </p>
               </div>
             </div>
-            <div className="col-xl-6">
+            <div className="col-lg-6">
               <div className={`${styles.process}`}>
                 <h3 data-process="03"><span>Collaborate</span></h3>
                 <p>
@@ -46,7 +46,7 @@ export default function Process() {
                 </p>
               </div>
             </div>
-            <div className="col-xl-6">
+            <div className="col-lg-6">
               <div className={`${styles.process}`}>
                 <h3 data-process="04"><span>Keep Expirementing</span></h3>
                 <p>

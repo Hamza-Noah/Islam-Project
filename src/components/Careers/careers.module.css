@@ -54,3 +54,12 @@
   font-size: 14px !important;
   color: #707070;
 }
+
+@media (max-width: 991px) {
+  .role {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}

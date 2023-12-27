@@ -1,4 +1,4 @@
-.skillset{
+.skillset {
   padding-top: 220px;
   margin-bottom: 100px;
 }
@@ -6,15 +6,28 @@
 .special-color {
   color: #fa1772;
   font-size: 18px;
+  @media (max-width: 767px) {
+  }
 }
 
 .title-color {
   color: #9da1b2;
-  font-size: 50px;
+
+  @media (min-width: 425px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 575px) {
+    font-size: 2.4rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 3.125rem;
+  }
 }
 
-.info p{
-    line-height: 1.7;
+.info p {
+  line-height: 1.7;
 }
 
 .link-to {
@@ -27,7 +40,10 @@
   width: fit-content;
   word-spacing: 3px;
   letter-spacing: 3px;
-  transition: all ease-in .3s;
+  transition: all ease-in 0.3s;
+  @media (max-width: 767px) {
+    margin-bottom: 70px;;
+    }
   &::after {
     content: "";
     position: absolute;
@@ -52,17 +68,16 @@
       rgba(246, 45, 168, 1) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fc0441",endColorstr="#f62da8",GradientType=1);
-  transition: all ease-in .3s;
-
+    transition: all ease-in 0.3s;
   }
 
   &:hover {
     margin-left: 20px;
     background-color: #1d212e;
-    border-radius: 10px 10px 0 0 ;
-  
+    border-radius: 10px 10px 0 0;
+
     &::after {
-    
-left: 0;    }
+      left: 0;
+    }
   }
 }

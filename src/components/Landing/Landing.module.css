@@ -15,9 +15,13 @@
     white-space: nowrap;
     font-size: 4rem;
     transform: translate(-7px);
+    font-size: 3rem;
+
+    @media (min-width: 425px) {
+      font-size: 4rem;
+    }
     @media (min-width: 992px) {
-    font-size: 6rem;
-      
+      font-size: 6rem;
     }
   }
 
@@ -51,7 +55,7 @@
   width: fit-content;
   word-spacing: 3px;
   letter-spacing: 3px;
-  transition: all ease-in .3s;
+  transition: all ease-in 0.3s;
   &::after {
     content: "";
     position: absolute;
@@ -76,17 +80,16 @@
       rgba(246, 45, 168, 1) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fc0441",endColorstr="#f62da8",GradientType=1);
-  transition: all ease-in .3s;
-
+    transition: all ease-in 0.3s;
   }
 
   &:hover {
     margin-left: 20px;
     background-color: #1d212e;
-    border-radius: 10px 10px 0 0 ;
-  
+    border-radius: 10px 10px 0 0;
+
     &::after {
-    
-left: 0;    }
+      left: 0;
+    }
   }
 }

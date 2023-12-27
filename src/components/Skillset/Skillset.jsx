@@ -19,7 +19,7 @@ export default function Skillset() {
                   <span className="d-block">User Experince</span>
                 </h2>
               </hgroup>
-              <a href="#skillset" className={`text-uppercase ${styles["link-to"]}`}>my process</a>
+              <a href="#process" className={`text-uppercase ${styles["link-to"]}`}>my process</a>
 
             </div>
             <div className="col-lg-6">

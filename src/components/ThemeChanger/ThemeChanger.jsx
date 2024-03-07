@@ -5,7 +5,17 @@ import purpleLine from "../../assets/images/svg/purple-line.svg";
 import blueLine from "../../assets/images/svg/blue-line.svg";
 import yellowLine from "../../assets/images/svg/yellow-line.svg";
 
+
+import { changeThemeToDark, darkMode } from "../../components/RTK/slice";
+import { useDispatch, useSelector } from "react-redux";
+
 export default function ThemeChanger() {
+
+  const mode = useSelector((state) => state.changeTheme.darkMode);
+  console.log(mode);
+
+  const dispatch = useDispatch();
+
   return (
     <>
       <section className={style["theme-container"]}>
@@ -41,6 +51,12 @@ export default function ThemeChanger() {
             </div>
           </div>
         </div>
+        <button
+        className="change-theme"
+        onClick={() => dispatch(changeThemeToDark())}
+      >
+        <h1>dark mode</h1>
+      </button>
       </section>
     </>
   );

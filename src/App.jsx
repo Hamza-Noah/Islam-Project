@@ -1,7 +1,5 @@
-import { useState } from "react";
 import "./App.css";
 
-import { changeThemeToDark, darkMode } from "./components/RTK/slice";
 import { useDispatch, useSelector } from "react-redux";
 
 import Header from "./components/Header";
@@ -15,36 +13,26 @@ import WhatNext from "./components/WhatIsNext/WhatIsNext";
 import ThemeChanger from "./components/ThemeChanger/ThemeChanger";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const mode = useSelector((state) => state.changeTheme.darkMode);
-  console.log(mode);
-
   const dispatch = useDispatch();
+  const mode = useSelector((state) => state.changeTheme.darkMode);
+
+
+
+
   return (
     <>
-      <section
-        style={{
-          background: mode ? "white" : "",
-          // color: mode ? "black" : "",
-        }}
-        className="all-template"
+      <section className={`${mode === "purple" ? "purple-template" : "dark-template"}`}
       >
-        <Header />
-        <Landing />
-        <Skillset />
-        <Process />
-        <Projects />
-        <Careers />
-        <About />
-        <WhatNext />
-        <ThemeChanger />
+        <Header mode={mode}/>
+        <Landing mode={mode}/>
+        <Skillset mode={mode}/>
+        <Process mode={mode}/>
+        <Projects mode={mode}/>
+        <Careers mode={mode}/>
+        <About mode={mode}/>
+        <WhatNext mode={mode}/>
+        <ThemeChanger mode={mode}/>
       </section>
-      <button
-        className="change-theme"
-        onClick={() => dispatch(changeThemeToDark())}
-      >
-        <h1>dark mode</h1>
-      </button>
     </>
   );
 }

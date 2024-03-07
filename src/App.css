@@ -1,4 +1,10 @@
-.all-template{
+.purple-template{
     padding-top: 30px;
     background-color: #171b29;
+}
+
+
+.dark-template{
+    padding-top: 30px;
+    background-color: #000000;
 }

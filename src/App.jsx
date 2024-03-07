@@ -12,6 +12,7 @@ import Projects from "./components/Projects";
 import Careers from "./components/Careers";
 import About from "./components/About";
 import WhatNext from "./components/WhatIsNext/WhatIsNext";
+import ThemeChanger from "./components/ThemeChanger/ThemeChanger";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,6 +37,7 @@ function App() {
         <Careers />
         <About />
         <WhatNext />
+        <ThemeChanger />
       </section>
       <button
         className="change-theme"

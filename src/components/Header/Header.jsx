@@ -1,8 +1,37 @@
 import React from "react";
-import logo from "../../assets/images/svg/logo-blue.svg";
+import logoPruple from "../../assets/images/svg/logo-purple.svg";
+import logoBlack from "../../assets/images/svg/logo-black.svg";
+import logoWhite from "../../assets/images/svg/logo-white.svg";
 import styles from "./Header.module.css";
+import { useState, useEffect } from "react";
 
-export default function Header() {
+export default function Header(props) {
+  const [logo, setLogo] = useState();
+  const [theme, setTheme] = useState();
+
+  function applyThemeClass(theme, styles) {
+    return theme === "purple"
+      ? styles.purple
+      : theme === "dark"
+      ? styles.dark
+      : styles.white;
+  }
+
+  useEffect(() => {
+    const logos = {
+      dark: logoBlack,
+      white: logoWhite,
+      default: logoPruple,
+    };
+    setLogo(logos[props.mode]);
+    setTheme(props.mode);
+  }, [props.mode]);
+
+  useEffect(() => {
+    setLogo(logoPruple);
+    setTheme("purple");
+  }, []);
+
   return (
     <section className={`${styles.header}`}>
       <div className="container">
@@ -12,12 +41,22 @@ export default function Header() {
               <img className={styles.logo} src={logo} alt="" />
             </a>
           </div>
-          <div className="hire-me">
-            <a href="#hire-me" className={styles["hire-me-btn"]}>Hire Me</a>
+          <div className={`hire-me`}>
+            <a
+              href="#hire-me"
+              className={`${styles["hire-me-btn"]} ${applyThemeClass(
+                theme,
+                styles
+              )}`}
+            >
+              Hire Me
+            </a>
           </div>
         </div>
       </div>
-      <div className={`${styles["overlay-on-scroll"]}`}></div>
+      <div
+        className={`${theme == "purple" && styles["overlay-on-scroll"]}`}
+      ></div>
     </section>
   );
 }

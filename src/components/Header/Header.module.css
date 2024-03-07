@@ -16,16 +16,27 @@
 }
 
 .hire-me-btn {
-  color: #fff;
-  background-color: #3a3d49;
   border: none;
   padding: 15px 50px;
   border-radius: 15px;
-  font-weight: bold;
-  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-family: Noto Sans, sans-serif;
   position: relative;
   z-index: 1110;
   font-size: 1.125rem;
+
+  &.purple {
+    color: #fff;
+    background-color: #3a3d49;
+  }
+  &.dark {
+    color: #fff;
+    background-color: #074aff;
+  }
+  &.white {
+    color: #fff;
+    background-color: #cf755a;
+  }
 }
 
 .overlay-on-scroll {

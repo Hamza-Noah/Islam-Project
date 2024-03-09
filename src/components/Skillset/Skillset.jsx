@@ -1,15 +1,30 @@
 import styles from "./skilleset.module.css";
+import { useState, useEffect } from "react";
 
-export default function Skillset() {
+export default function Skillset(props) {
+  const [theme, setTheme] = useState();
+
+  function applyThemeClass(theme, styles) {
+    return theme === "purple"
+      ? styles.purple
+      : theme === "dark"
+      ? styles.dark
+      : styles.white;
+  }
+
+  useEffect(() => {
+    setTheme(props.mode);
+  }, [props.mode]);
+
   return (
     <>
-      <section id="skillset" className={`${styles.skillset}`}> 
+      <section id="skillset" className={`${styles.skillset}`}>
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <hgroup>
                 <p
-                  className={`${styles["special-color"]} fw-bolder text-uppercase`}
+                  className={`${styles["special-color"]} ${applyThemeClass(theme, styles)} fw-bolder text-uppercase`}
                 >
                   my skillset
                 </p>
@@ -19,12 +34,18 @@ export default function Skillset() {
                   <span className="d-block">User Experince</span>
                 </h2>
               </hgroup>
-              <a href="#process" className={`text-uppercase ${styles["link-to"]}`}>my process</a>
-
+              <a
+                href="#process"
+                className={`text-uppercase ${
+                  styles["link-to"]
+                } ${applyThemeClass(theme, styles)}`}
+              >
+                my process
+              </a>
             </div>
             <div className="col-lg-6">
-              <div className={`${styles.info}`}>
-                <p className="text-white pe-lg-5 text-center text-lg-start">
+              <div className={`${styles.info} ${applyThemeClass(theme, styles)}`}>
+                <p className="pe-lg-5 text-center text-lg-start">
                   I specialize in building complex web applications, leading
                   front-end teams, digital product design and developing visual
                   design systems. I enjoy creating effortless user experience

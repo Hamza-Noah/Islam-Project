@@ -21,16 +21,12 @@ export default function Header(props) {
     const logos = {
       dark: logoBlack,
       white: logoWhite,
-      default: logoPruple,
+      pruple: logoPruple,
     };
     setLogo(logos[props.mode]);
     setTheme(props.mode);
   }, [props.mode]);
 
-  useEffect(() => {
-    setLogo(logoPruple);
-    setTheme("purple");
-  }, []);
 
   return (
     <section className={`${styles.header}`}>

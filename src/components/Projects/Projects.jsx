@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "owl.carousel/dist/assets/owl.carousel.css";
-import plusIcon from "../../assets/images/svg/plus-icon.svg";
+
+import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
+import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
+
 import activeDot from "../../assets/images/active-item.png";
 import unactiveDot from "../../assets/images/unactive-item.png";
 
@@ -13,7 +16,28 @@ import project6 from "../../assets/images/project-6.jpg";
 
 import styles from "./projects.module.css";
 
-export default function Projects() {
+export default function Projects(props) {
+  const [theme, setTheme] = useState();
+  const [plusIcon, setPlusIcon] = useState();
+
+  useEffect(() => {
+    const plusIcons = {
+      dark: plusIconDark,
+      purple: plusIconPurple,
+    };
+
+    setPlusIcon(plusIcons[props.mode]);
+    setTheme(props.mode);
+  }, [props.mode]);
+
+  function applyThemeClass(theme = "purple", styles) {
+    return theme === "purple"
+      ? styles.purple
+      : theme === "dark"
+      ? styles.dark
+      : styles.white;
+  }
+
   useEffect(() => {
     // Load jQuery
     const script1 = document.createElement("script");
@@ -140,24 +164,53 @@ export default function Projects() {
           className={`${styles.dots} dots d-flex justify-content-center mx-auto`}
         >
           <button className="btn p-0 pe-1" onClick={() => goToSlide(0)}>
-            {active ? (
-              <img className={styles["btn-dot"]} src={unactiveDot} alt="" />
-            ) : (
-              <img className={styles["btn-dot"]} src={activeDot} alt="" />
+            {theme === "purple" && ( 
+              <>
+                {active ? (
+                  <img className={styles["btn-dot"]} src={unactiveDot} alt="" />
+                ) : (
+                  <img className={styles["btn-dot"]} src={activeDot} alt="" />
+                )}
+              </>
+            )}
+            {theme === "dark" && (
+             <>
+             {active ? (
+              <span className={`${styles["dark-unactive-dot"]}`}></span>
+              ) : (
+                <span className={`${styles["dark-active-dot"]}`}></span>
+             )}
+           </>
             )}
           </button>
           <button className="btn p-0 ps-1" onClick={() => goToSlide(1)}>
-            {active ? (
-              <img className={styles["btn-dot"]} src={activeDot} alt="" />
-            ) : (
-              <img className={styles["btn-dot"]} src={unactiveDot} alt="" />
+            {theme == "purple" && (
+              <>
+                {active ? (
+                  <img className={styles["btn-dot"]} src={activeDot} alt="" />
+                ) : (
+                  <img className={styles["btn-dot"]} src={unactiveDot} alt="" />
+                )}
+              </>
+            )}
+             {theme === "dark" && (
+             <>
+             {active ? (
+               <span className={`${styles["dark-active-dot"]}`}></span>
+               ) : (
+                 <span className={`${styles["dark-unactive-dot"]}`}></span>
+             )}
+           </>
             )}
           </button>
         </div>
         <a
           href="https://www.behance.net/samo_abbas19"
           target="_blank"
-          className={`text-uppercase ${styles["link-to"]}`}
+          className={`text-uppercase ${styles["link-to"]} ${applyThemeClass(
+            theme,
+            styles
+          )}`}
         >
           my behance
         </a>

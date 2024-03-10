@@ -21,7 +21,7 @@ export default function Header(props) {
     const logos = {
       dark: logoBlack,
       white: logoWhite,
-      pruple: logoPruple,
+      purple: logoPruple,
     };
     setLogo(logos[props.mode]);
     setTheme(props.mode);

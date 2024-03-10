@@ -5,12 +5,14 @@ import purpleLine from "../../assets/images/svg/purple-line.svg";
 import blueLine from "../../assets/images/svg/blue-line.svg";
 import yellowLine from "../../assets/images/svg/yellow-line.svg";
 
-
-import { changeThemeToDark, darkMode } from "../../components/RTK/slice";
+import {
+  changeThemeToDark,
+  changeThemeTopurple,
+  darkMode,
+} from "../../components/RTK/slice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function ThemeChanger() {
-
   const mode = useSelector((state) => state.changeTheme.darkMode);
   console.log(mode);
 
@@ -28,35 +30,38 @@ export default function ThemeChanger() {
             </button>
             <div className={`${style.circadian}`}>
               <div className={`${style.hours}`}>
-                {[...Array(8)].map((_, index) => (
+                {[...Array(12)].map((_, index) => (
                   <div
+                    onClick={() => dispatch(changeThemeTopurple())}
                     key={index}
-                    className={`${`${style.hour} ${style["purple-hour"]}`} ${index % 6 === 0 ? style.fill : ""}`}
-                  ><img src={purpleLine} alt="" /> </div>
+                    className={`${`${style.hour} ${style["purple-hour"]}`} ${
+                      index % 6 === 0 ? style.fill : ""
+                    }`}
+                  >
+                    <img src={purpleLine} alt="" />{" "}
+                  </div>
                 ))}
-                {[...Array(8)].map((_, index) => (
+                {[...Array(12)].map((_, index) => (
                   <div
+                    onClick={() => dispatch(changeThemeToDark())}
                     key={index}
-                    className={`${style.hour} ${index % 6 === 0 ? style.fill : ""}`}
-                  ><img src={blueLine} alt="" /></div>
+                    className={`${style.hour} ${
+                      index % 6 === 0 ? style.fill : ""
+                    }`}
+                  >
+                    <img src={blueLine} alt="" />
+                  </div>
                 ))}
-                {[...Array(8)].map((_, index) => (
+                {/* {[...Array(8)].map((_, index) => (
                   <div
                     key={index}
                     className={`${style.hour} ${index % 6 === 0 ? style.fill : ""}`}
                   ><img src={yellowLine} alt="" /></div>
-                ))}
+                ))} */}
               </div>
-           
             </div>
           </div>
         </div>
-        <button
-        className="change-theme"
-        onClick={() => dispatch(changeThemeToDark())}
-      >
-        <h1>dark mode</h1>
-      </button>
       </section>
     </>
   );

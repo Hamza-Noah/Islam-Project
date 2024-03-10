@@ -1,7 +1,35 @@
 import styles from "./careers.module.css";
-import plusIcon from "../../assets/images/svg/plus-icon.svg";
 
-export default function Careers() {
+
+import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
+import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
+
+import { useState, useEffect } from "react";
+
+export default function Careers(props) {
+  const [theme, setTheme] = useState();
+  const [plusIcon, setPlusIcon] = useState();
+
+
+  function applyThemeClass(theme, styles) {
+    return theme === "purple"
+      ? styles.purple
+      : theme === "dark"
+      ? styles.dark
+      : styles.white;
+  }
+
+  useEffect(() => {
+
+    const plusIcons = {
+      dark: plusIconDark,
+      purple: plusIconPurple,
+    };
+
+    setPlusIcon(plusIcons[props.mode]);
+    setTheme(props.mode);
+  }, [props.mode]);
+
   return (
     <section className={styles.careers}>
       <div className="container">
@@ -11,7 +39,7 @@ export default function Careers() {
             <img src={plusIcon} alt="" />
           </i>
         </h2>
-        <div className={`${styles.roles} row m-0`}>
+        <div className={`${styles.roles} ${applyThemeClass(theme, styles)} row m-0`}>
           <div className="col-sm-6 col-lg-3 ">
             <div className={styles.role}>
               <h3 className="">Google GDG</h3>

@@ -24,16 +24,21 @@
   padding-left: 30px;
 }
 
-.roles > div::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  transform: translate(-50%, -50%);
-  height: 40px;
-  width: 8px;
-  background-repeat: no-repeat;
-  background-image: url("../../assets/images/svg/role.svg");
+.roles {
+  & > div::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 8px;
+    background-repeat: no-repeat;
+  }
+
+  &.purple  > div::before {
+    background-image: url("../../assets/images/svg/role.svg");
+  }
 }
 
 .roles h3,

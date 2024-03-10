@@ -16,22 +16,20 @@ function App() {
   const dispatch = useDispatch();
   const mode = useSelector((state) => state.changeTheme.darkMode);
 
-
-
-
   return (
     <>
-      <section className={`${mode === "purple" ? "purple-template" : "dark-template"}`}
+      <section
+        className={`${mode === "purple" ? "purple-template" : "dark-template"}`}
       >
-        <Header mode={mode}/>
-        <Landing mode={mode}/>
-        <Skillset mode={mode}/>
-        <Process mode={mode}/>
-        <Projects mode={mode}/>
-        <Careers mode={mode}/>
-        <About mode={mode}/>
-        <WhatNext mode={mode}/>
-        <ThemeChanger mode={mode}/>
+        <Header mode={mode} />
+        <Landing mode={mode} />
+        <Skillset mode={mode} />
+        <Process mode={mode} />
+        <Projects mode={mode} />
+        <Careers mode={mode} />
+        <About mode={mode} />
+        <WhatNext mode={mode} />
+        <ThemeChanger mode={mode} />
       </section>
     </>
   );

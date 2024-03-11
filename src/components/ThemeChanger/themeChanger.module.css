@@ -1,6 +1,13 @@
 .theme-container {
-  background-color: #171b29;
   padding: 100px 0;
+  
+  &.purple {
+    background-color: #171b29;
+  }
+  &.dark {
+    background-color: transparent;
+
+  }
 }
 
 .theme-btn-purple {

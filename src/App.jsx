@@ -1,7 +1,4 @@
-import "./App.css";
-
-import { useDispatch, useSelector } from "react-redux";
-
+import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Skillset from "./components/Skillset";
@@ -10,28 +7,34 @@ import Projects from "./components/Projects";
 import Careers from "./components/Careers";
 import About from "./components/About";
 import WhatNext from "./components/WhatIsNext/WhatIsNext";
-import ThemeChanger from "./components/ThemeChanger/ThemeChanger";
+import ThemeChanger from "./components/ThemeChanger";
+import "./App.css";
 
 function App() {
-  const dispatch = useDispatch();
-  const mode = useSelector((state) => state.changeTheme.darkMode);
+  const [theme, setTheme] = useState("purple");
+
+  const handleThemeChange = (selectedTheme) => {
+    setTheme(selectedTheme);
+  };
+
+  useEffect(() => {
+    setTheme("purple");
+  }, []);
 
   return (
-    <>
-      <section
-        className={`${mode === "purple" ? "purple-template" : "dark-template"}`}
-      >
-        <Header mode={mode} />
-        <Landing mode={mode} />
-        <Skillset mode={mode} />
-        <Process mode={mode} />
-        <Projects mode={mode} />
-        <Careers mode={mode} />
-        <About mode={mode} />
-        <WhatNext mode={mode} />
-        <ThemeChanger mode={mode} />
-      </section>
-    </>
+    <div
+      className={`${theme === "purple" ? "purple-template" : "dark-template"}`}
+    >
+      <Header mode={theme} />
+      <Landing mode={theme} />
+      <Skillset mode={theme} />
+      <Process mode={theme} />
+      <Projects mode={theme} />
+      <Careers mode={theme} />
+      <About mode={theme} />
+      <WhatNext mode={theme} />
+      <ThemeChanger onThemeChange={handleThemeChange} />
+    </div>
   );
 }
 

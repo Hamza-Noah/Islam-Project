@@ -13,12 +13,6 @@ export default function Landing(props) {
   }
 
   useEffect(() => {
-    // const logos = {
-    //   dark: logoBlack,
-    //   white: logoWhite,
-    //   default: logoPruple,
-    // };
-    // setLogo(logos[props.mode]);
     setTheme(props.mode);
   }, [props.mode]);
 

@@ -1,5 +1,10 @@
 .special-color {
-  color: #fa1772;
+  &.purple {
+    color: #fa1772;
+  }
+  &.dark {
+    color: #074aff;
+  }
   @media (max-width: 767px) {
     text-align: center;
   }
@@ -56,6 +61,11 @@
     width: 100%;
     left: 8px;
     bottom: 0;
+   
+    transition: all ease-in 0.3s;
+  }
+
+  &.purple::after {
     background: rgb(252, 4, 65);
     background: -moz-linear-gradient(
       93deg,
@@ -65,7 +75,7 @@
     background: -webkit-linear-gradient(
       93deg,
       rgba(252, 4, 65, 1) 50%,
-      rgba(246, 45, 168, 1) 100%
+      rgba(246, 45, 168, 1) 100% 
     );
     background: linear-gradient(
       93deg,
@@ -73,8 +83,30 @@
       rgba(246, 45, 168, 1) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fc0441",endColorstr="#f62da8",GradientType=1);
-    transition: all ease-in 0.3s;
+    
   }
+
+  &.dark::after {
+    background: rgb(7,74,255);
+    background: -moz-linear-gradient(
+      93deg,
+      rgba(7,74,255, .5) 50%,
+      rgba(7,74,255, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      93deg,
+      rgba(7,74,255, .5) 50%,
+      rgba(7,74,255, 1) 100%
+    );
+    background: linear-gradient(
+      93deg,
+      rgba(7,74,255, .5) 50%,
+      rgba(7,74,255, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#074aff",endColorstr="#f62da8",GradientType=1);
+    
+  }
+
 
   &:hover {
     margin-left: 20px;

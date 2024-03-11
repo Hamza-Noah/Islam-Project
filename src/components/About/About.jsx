@@ -1,6 +1,23 @@
 import styles from "./about.module.css";
+import { useState, useEffect } from "react";
 
-export default function About() {
+
+export default function About(props) {
+  const [theme, setTheme] = useState();
+
+  function applyThemeClass(theme, styles) {
+    return theme === "purple"
+      ? styles.purple
+      : theme === "dark"
+      ? styles.dark
+      : styles.white;
+  }
+  
+  useEffect(() => {
+    setTheme(props.mode);
+  }, [props.mode]);
+
+
   return (
     <>
       <div className="container my-5 py-5">
@@ -8,7 +25,7 @@ export default function About() {
           <div className="col-lg-6">
             <div className="info-breadcrumb">
               <hgroup>
-                <p className={`${styles["special-color"]} fw-bolder`}>
+                <p className={`${styles["special-color"]} ${applyThemeClass(theme, styles)} fw-bolder`}>
                   ABOUT ME
                 </p>
                 <h2 className={styles.title}>
@@ -19,7 +36,7 @@ export default function About() {
               </hgroup>
               <a
                 href="https://instagram.com/samo.abbes98?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"
-                className={`text-uppercase ${styles["link-to"]}`}
+                className={`text-uppercase ${styles["link-to"]} ${applyThemeClass(theme, styles)}`}
               >
                 Follow Me On Instagram
               </a>

@@ -1,21 +1,61 @@
+import { useState, useEffect } from "react";
+
 import styles from "./what-is-next.module.css";
-import socialIcon1 from "../../assets/images/svg/social-icon-1.svg";
-import socialIcon2 from "../../assets/images/svg/social-icon-2.svg";
-import socialIcon3 from "../../assets/images/svg/social-icon-3.svg";
-import socialIcon4 from "../../assets/images/svg/social-icon-4.svg";
-import socialIcon5 from "../../assets/images/svg/social-icon-5.svg";
-import socialIcon6 from "../../assets/images/svg/social-icon-6.svg";
+import socialIcon1Purple from "../../assets/images/svg/social-icon-1.svg";
+import socialIcon2Purple from "../../assets/images/svg/social-icon-2.svg";
+import socialIcon3Purple from "../../assets/images/svg/social-icon-3.svg";
+import socialIcon4Purple from "../../assets/images/svg/social-icon-4.svg";
+import socialIcon5Purple from "../../assets/images/svg/social-icon-5.svg";
+import socialIcon6Purple from "../../assets/images/svg/social-icon-6.svg";
+
+import socialIcon1Dark from "../../assets/images/svg/social-icon-dark-1.svg";
+import socialIcon2Dark from "../../assets/images/svg/social-icon-dark-2.svg";
+import socialIcon3Dark from "../../assets/images/svg/social-icon-dark-3.svg";
+import socialIcon4Dark from "../../assets/images/svg/social-icon-dark-4.svg";
+import socialIcon5Dark from "../../assets/images/svg/social-icon-dark-5.svg";
+import socialIcon6Dark from "../../assets/images/svg/social-icon-dark-6.svg";
+
 import arrowRight from "../../assets/images/svg/arrow-right.svg";
 
-export default function WhatNext() {
-  const socialIcons = [
-    socialIcon1,
-    socialIcon2,
-    socialIcon3,
-    socialIcon4,
-    socialIcon5,
-    socialIcon6,
+export default function WhatNext(props) {
+  const [theme, setTheme] = useState();
+  const [socialIcons, setSocialIcons] = useState([]);
+
+  function applyThemeClass(theme, styles) {
+    return theme === "purple"
+      ? styles.purple
+      : theme === "dark"
+      ? styles.dark
+      : styles.white;
+  }
+
+  const socialIconsPurple = [
+    socialIcon1Purple,
+    socialIcon2Purple,
+    socialIcon3Purple,
+    socialIcon4Purple,
+    socialIcon5Purple,
+    socialIcon6Purple,
   ];
+
+  const socialIconsDark = [
+    socialIcon1Dark,
+    socialIcon2Dark,
+    socialIcon3Dark,
+    socialIcon4Dark,
+    socialIcon5Dark,
+    socialIcon6Dark,
+  ];
+
+  useEffect(() => {
+    const socialIconsItems = {
+      purple: socialIconsPurple,
+      dark: socialIconsDark,
+    };
+
+    setTheme(props.mode);
+    setSocialIcons(socialIconsItems[props.mode]);
+  }, [props.mode]);
 
   const socialLinks = [
     "https://www.linkedin.com/in/eslam-abbes-24727817a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -27,10 +67,15 @@ export default function WhatNext() {
   ];
 
   return (
-    <section id="hire-me" className={`${styles["what-next"]} text-center`}>
+    <section id="hire-me" className={`${styles["what-next"]}  ${applyThemeClass(theme, styles)} text-center`}>
       <div className="container">
         <hgroup>
-          <p className={`${styles["special-color"]} text-uppercase fw-bolder`}>
+          <p
+            className={`${styles["special-color"]} ${applyThemeClass(
+              theme,
+              styles
+            )} text-uppercase fw-bolder`}
+          >
             What's Next
           </p>
           <h2 className={styles.title}>Let's Work Together.</h2>
@@ -57,7 +102,11 @@ export default function WhatNext() {
           </ul>
         </div>
         <div className={`${styles["mail-link"]}`}>
-          <a href="https://forms.gle/Gow1qUDppr7H42h69" target="_blank" className={`${styles["link-to"]} text-uppercase mx-auto mt-5`}>
+          <a
+            href="https://forms.gle/Gow1qUDppr7H42h69"
+            target="_blank"
+            className={`${styles["link-to"]} ${applyThemeClass(theme, styles)} text-uppercase mx-auto mt-5`}
+          >
             write me an email <img src={arrowRight} alt="" />
           </a>
         </div>

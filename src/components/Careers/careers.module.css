@@ -39,6 +39,9 @@
   &.purple  > div::before {
     background-image: url("../../assets/images/svg/role.svg");
   }
+  &.dark  > div::before {
+    background-image: url("../../assets/images/svg/role-dark.svg");
+  }
 }
 
 .roles h3,

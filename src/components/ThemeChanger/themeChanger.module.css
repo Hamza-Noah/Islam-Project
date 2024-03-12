@@ -1,12 +1,11 @@
 .theme-container {
   padding: 100px 0;
-  
+
   &.purple {
     background-color: #171b29;
   }
   &.dark {
     background-color: transparent;
-
   }
 }
 
@@ -43,9 +42,12 @@
     transition: height 0.3s linear;
     height: 50px;
   }
-  
-  &:hover img {
-    height: 100px;
+
+  &:hover {
+    height: 20px;
+    & img {
+      height: 100px;
+    }
   }
 }
 

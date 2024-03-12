@@ -6,13 +6,6 @@ import purpleLine from "../../assets/images/svg/purple-line.svg";
 import blueLine from "../../assets/images/svg/blue-line.svg";
 import yellowLine from "../../assets/images/svg/yellow-line.svg";
 
-// import {
-//   changeThemeToDark,
-//   changeThemeTopurple,
-//   darkMode,
-// } from "../../components/RTK/slice";
-// import { useDispatch, useSelector } from "react-redux";
-
 export default function ThemeChanger(props) {
   // const mode = useSelector((state) => state.changeTheme.darkMode);
   const [theme, setTheme] = useState();
@@ -24,7 +17,6 @@ export default function ThemeChanger(props) {
       ? styles.dark
       : styles.white;
   }
-  // const dispatch = useDispatch();
 
   useEffect(() => {
     setTheme(props.mode);
@@ -47,7 +39,7 @@ export default function ThemeChanger(props) {
             </button>
             <div className={`${style.circadian}`}>
               <div className={`${style.hours}`}>
-                {[...Array(12)].map((_, index) => (
+                {[...Array(8)].map((_, index) => (
                   <div
                     onClick={() => props.onThemeChange("purple")}
                     key={index}
@@ -58,7 +50,7 @@ export default function ThemeChanger(props) {
                     <img src={purpleLine} alt="" />{" "}
                   </div>
                 ))}
-                {[...Array(12)].map((_, index) => (
+                {[...Array(8)].map((_, index) => (
                   <div
                     onClick={() => props.onThemeChange("dark")}
                     key={index}
@@ -69,12 +61,17 @@ export default function ThemeChanger(props) {
                     <img src={blueLine} alt="" />
                   </div>
                 ))}
-                {/* {[...Array(8)].map((_, index) => (
+                {[...Array(8)].map((_, index) => (
                   <div
+                    onClick={() => props.onThemeChange("white")}
                     key={index}
-                    className={`${style.hour} ${index % 6 === 0 ? style.fill : ""}`}
-                  ><img src={yellowLine} alt="" /></div>
-                ))} */}
+                    className={`${style.hour} ${
+                      index % 6 === 0 ? style.fill : ""
+                    }`}
+                  >
+                    <img src={yellowLine} alt="" />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

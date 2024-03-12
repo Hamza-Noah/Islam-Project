@@ -21,10 +21,12 @@ function App() {
     setTheme("purple");
   }, []);
 
+  function applyThemeClass(theme) {
+    return theme === "purple" ? "purple" : theme === "dark" ? "dark" : "white";
+  }
+
   return (
-    <div
-      className={`${theme === "purple" ? "purple-template" : "dark-template"}`}
-    >
+    <div className={`template ${applyThemeClass(theme)}`}>
       <Header mode={theme} />
       <Landing mode={theme} />
       <Skillset mode={theme} />
@@ -32,7 +34,7 @@ function App() {
       <Projects mode={theme} />
       <Careers mode={theme} />
       <About mode={theme} />
-      <WhatNext mode={theme} />
+      {/* <WhatNext mode={theme} /> */}
       <ThemeChanger onThemeChange={handleThemeChange} />
     </div>
   );

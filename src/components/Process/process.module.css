@@ -2,6 +2,9 @@
   font-size: 50px;
   font-weight: bolder;
   color: #9da1b2;
+  &.white {
+    color: #396c54;
+  }
 }
 
 .title img {
@@ -64,30 +67,38 @@
   }
 
   &.purple {
-    h3{
+    h3 {
       color: #9da1b2;
-      &:before{
+      &:before {
         color: #191f34;
       }
-
     }
-    p{
+    p {
       color: white;
-
     }
   }
   &.dark {
-    h3{
+    h3 {
       color: #ffffff;
-      &:before{
+      &:before {
         color: #131313;
       }
-
     }
 
-    p{
+    p {
       color: #707070;
+    }
+  }
+  &.white {
+    h3 {
+      color: #396c54;
+      &:before {
+        color: #f1ecda;
+      }
+    }
 
+    p {
+      color: #73827b;
     }
   }
 }

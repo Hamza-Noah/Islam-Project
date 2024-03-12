@@ -34,7 +34,7 @@ export default function Landing(props) {
                   <span className="ps-lg-5">Desiner</span>
                 </p>
                 <div className="position-relative">
-                  <p className={`${styles.bow} fw-bolder`}>Hello it's me</p>
+                  <p className={`${styles.bow} ${theme == "white" ? styles.white : ""} fw-bolder`}>Hello it's me</p>
                   <h1 className={`${(styles.title, styles["designer-name"])} ${applyThemeClass(theme, styles)}`}>
                     Eslam Abbas
                   </h1>

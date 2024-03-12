@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./process.module.css";
 import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
 import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
+import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
 
 export default function Process(props) {
   const [theme, setTheme] = useState();
@@ -12,6 +13,7 @@ export default function Process(props) {
     const plusIcons = {
       dark: plusIconDark,
       purple: plusIconPurple,
+      white: plusIconWhite,
     };
     setPlusIcon(plusIcons[props.mode]);
     setTheme(props.mode);
@@ -29,7 +31,7 @@ export default function Process(props) {
     <>
       <section id="process" className="mt-5 pt-5">
         <div className="container">
-          <h2 className={`${styles.title}`}>
+          <h2 className={`${styles.title} ${applyThemeClass(theme, styles)}`}>
             Process{" "}
             <i>
               <img src={plusIcon} alt="" />

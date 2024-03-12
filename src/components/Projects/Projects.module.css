@@ -134,6 +134,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#074aff",endColorstr="#f62da8",GradientType=1);
   }
 
+  &.white:after {
+    background: #cf755a;
+  }
+
   &:hover {
     margin-left: 20px;
     background-color: #1d212e;
@@ -142,6 +146,10 @@
     &::after {
       left: 0;
     }
+  }
+
+  &.white:hover {
+    background-color: #eaefe4;
   }
 }
 

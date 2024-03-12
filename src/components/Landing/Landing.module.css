@@ -21,6 +21,10 @@
 
   .bow {
     font-size: 20px;
+
+    &.white {
+      color: #396c54 !important;
+    }
   }
   @media (max-width: 767px) {
     padding-top: 240px;
@@ -41,6 +45,9 @@
     &.dark {
       color: #ffffff;
     }
+    &.white {
+      color: #396c54;
+    }
 
     @media (max-width: 767px) {
       text-align: center;
@@ -56,6 +63,11 @@
     &.dark {
       color: #707070;
     }
+
+    &.white {
+      color: #73827b;
+    }
+
     @media (max-width: 991px) {
       text-align: center;
     }
@@ -66,6 +78,9 @@
   font-family: "Segoe UI";
   font-weight: 900;
   transform: translate(15px, -30px);
+  &.white {
+    color: #f1ecda;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -93,7 +108,7 @@
   word-spacing: 3px;
   letter-spacing: 3px;
   transition: all ease-in 0.3s;
-  &.purple ,
+  &.purple,
   &.dark {
     color: #707070;
   }
@@ -105,6 +120,7 @@
   @media (max-width: 767px) {
     margin-inline: auto;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -114,6 +130,7 @@
     bottom: 0;
     transition: all ease-in 0.3s;
   }
+
   &.purple::after {
     background: rgb(252, 4, 65);
     background: -moz-linear-gradient(
@@ -124,7 +141,7 @@
     background: -webkit-linear-gradient(
       93deg,
       rgba(252, 4, 65, 1) 50%,
-      rgba(246, 45, 168, 1) 100% 
+      rgba(246, 45, 168, 1) 100%
     );
     background: linear-gradient(
       93deg,
@@ -132,28 +149,30 @@
       rgba(246, 45, 168, 1) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fc0441",endColorstr="#f62da8",GradientType=1);
-    
   }
 
   &.dark::after {
-    background: rgb(7,74,255);
+    background: rgb(7, 74, 255);
     background: -moz-linear-gradient(
       93deg,
-      rgba(7,74,255, .5) 50%,
-      rgba(7,74,255, 1) 100%
+      rgba(7, 74, 255, 0.5) 50%,
+      rgba(7, 74, 255, 1) 100%
     );
     background: -webkit-linear-gradient(
       93deg,
-      rgba(7,74,255, .5) 50%,
-      rgba(7,74,255, 1) 100%
+      rgba(7, 74, 255, 0.5) 50%,
+      rgba(7, 74, 255, 1) 100%
     );
     background: linear-gradient(
       93deg,
-      rgba(7,74,255, .5) 50%,
-      rgba(7,74,255, 1) 100%
+      rgba(7, 74, 255, 0.5) 50%,
+      rgba(7, 74, 255, 1) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#074aff",endColorstr="#f62da8",GradientType=1);
-    
+  }
+
+  &.white:after {
+    background: #cf755a;
   }
 
   &:hover {
@@ -164,5 +183,9 @@
     &::after {
       left: 0;
     }
+  }
+
+  &.white:hover {
+    background-color: #eaefe4;
   }
 }

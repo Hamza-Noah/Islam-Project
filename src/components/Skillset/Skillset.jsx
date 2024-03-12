@@ -24,11 +24,11 @@ export default function Skillset(props) {
             <div className="col-lg-6">
               <hgroup>
                 <p
-                  className={`${styles["special-color"]} ${applyThemeClass(theme, styles)} fw-bolder text-uppercase`}
+                  className={`${styles["special-color"]}  ${applyThemeClass(theme, styles)} fw-bolder text-uppercase`}
                 >
                   my skillset
                 </p>
-                <h2 className={`${styles["title-color"]} fw-bolder`}>
+                <h2 className={`${styles["title-color"]}  ${theme == "white" ? styles.white : ""} fw-bolder`}>
                   <span className="d-block">Graphic Design,</span>
                   <span className="d-block">Interface Design &</span>
                   <span className="d-block">User Experince</span>

@@ -42,11 +42,21 @@
   &.dark  > div::before {
     background-image: url("../../assets/images/svg/role-dark.svg");
   }
+
+  
 }
 
 .roles h3,
 .roles .role-name {
   color: white !important;
+}
+.roles.white h3,
+.roles.white .role-name {
+  color: #73827b !important;
+}
+
+.roles.white p:last-child{
+  color: #707070;
 }
 
 .roles h3 {

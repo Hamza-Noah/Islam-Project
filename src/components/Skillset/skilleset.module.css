@@ -16,10 +16,16 @@
   &.dark {
     color: #074aff;
   }
+  &.white {
+    color: #cf755a;
+  }
 }
 
 .title-color {
   color: #9da1b2;
+  &.white {
+    color: #396c54;
+  }
   font-size: 2rem !important;
   @media (max-width: 767px) {
     text-align: center;
@@ -36,12 +42,16 @@
     font-weight: 600;
   }
 
-  &.purple {
+  &.purple p {
     color: #ffffff;
   }
 
-  &.dark {
+  &.dark p {
     color: #707070;
+  }
+
+  &.white p {
+    color: #73827b;
   }
 }
 
@@ -119,6 +129,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#074aff",endColorstr="#f62da8",GradientType=1);
   }
 
+  &.white:after {
+    background: #cf755a;
+  }
+
   &:hover {
     margin-left: 20px;
     background-color: #1d212e;
@@ -127,5 +141,9 @@
     &::after {
       left: 0;
     }
+  }
+
+  &.white:hover {
+    background-color: #eaefe4;
   }
 }

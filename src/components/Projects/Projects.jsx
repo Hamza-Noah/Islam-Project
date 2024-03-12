@@ -3,6 +3,8 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 
 import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
 import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
+import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
+
 
 import activeDot from "../../assets/images/active-item.png";
 import unactiveDot from "../../assets/images/unactive-item.png";
@@ -24,6 +26,7 @@ export default function Projects(props) {
     const plusIcons = {
       dark: plusIconDark,
       purple: plusIconPurple,
+      white: plusIconWhite
     };
 
     setPlusIcon(plusIcons[props.mode]);

@@ -1,15 +1,14 @@
-import styles from "./careers.module.css";
-
+import { useState, useEffect } from "react";
 
 import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
 import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
+import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
 
-import { useState, useEffect } from "react";
+import styles from "./careers.module.css";
 
 export default function Careers(props) {
   const [theme, setTheme] = useState();
   const [plusIcon, setPlusIcon] = useState();
-
 
   function applyThemeClass(theme, styles) {
     return theme === "purple"
@@ -20,10 +19,10 @@ export default function Careers(props) {
   }
 
   useEffect(() => {
-
     const plusIcons = {
       dark: plusIconDark,
       purple: plusIconPurple,
+      white: plusIconWhite,
     };
 
     setPlusIcon(plusIcons[props.mode]);
@@ -39,7 +38,12 @@ export default function Careers(props) {
             <img src={plusIcon} alt="" />
           </i>
         </h2>
-        <div className={`${styles.roles} ${applyThemeClass(theme, styles)} row m-0`}>
+        <div
+          className={`${styles.roles} ${applyThemeClass(
+            theme,
+            styles
+          )} row m-0`}
+        >
           <div className="col-sm-6 col-lg-3 ">
             <div className={styles.role}>
               <h3 className="">Google GDG</h3>

@@ -28,7 +28,7 @@ export default function About(props) {
                 <p className={`${styles["special-color"]} ${applyThemeClass(theme, styles)} fw-bolder`}>
                   ABOUT ME
                 </p>
-                <h2 className={styles.title}>
+                <h2 className={`${styles.title} ${applyThemeClass(theme, styles)}`}>
                   Designing with <br />
                   passion for Problem <br />
                   Solving
@@ -43,7 +43,7 @@ export default function About(props) {
             </div>
           </div>
           <div className="col-lg-6">
-            <div className={`${styles["info-details"]} text-white pe-lg-5`}>
+            <div className={`${styles["info-details"]} ${applyThemeClass(theme, styles)} text-white pe-lg-5`}>
               <p>
                 I’ve always been passionate about pixels and design projects and
                 haven’t stopped working and learning about new technologies .

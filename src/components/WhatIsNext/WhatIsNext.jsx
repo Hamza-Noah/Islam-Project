@@ -15,6 +15,13 @@ import socialIcon4Dark from "../../assets/images/svg/social-icon-dark-4.svg";
 import socialIcon5Dark from "../../assets/images/svg/social-icon-dark-5.svg";
 import socialIcon6Dark from "../../assets/images/svg/social-icon-dark-6.svg";
 
+import socialIcon1White from "../../assets/images/svg/social-icon-white-1.svg";
+import socialIcon2White from "../../assets/images/svg/social-icon-white-2.svg";
+import socialIcon3White from "../../assets/images/svg/social-icon-white-3.svg";
+import socialIcon4White from "../../assets/images/svg/social-icon-white-4.svg";
+import socialIcon5White from "../../assets/images/svg/social-icon-white-5.svg";
+import socialIcon6White from "../../assets/images/svg/social-icon-white-6.svg";
+
 import arrowRight from "../../assets/images/svg/arrow-right.svg";
 
 export default function WhatNext(props) {
@@ -47,10 +54,20 @@ export default function WhatNext(props) {
     socialIcon6Dark,
   ];
 
+  const socialIconsWhite = [
+    socialIcon1White,
+    socialIcon2White,
+    socialIcon3White,
+    socialIcon4White,
+    socialIcon5White,
+    socialIcon6White,
+  ];
+
   useEffect(() => {
     const socialIconsItems = {
       purple: socialIconsPurple,
       dark: socialIconsDark,
+      white: socialIconsWhite,
     };
 
     setTheme(props.mode);
@@ -67,7 +84,13 @@ export default function WhatNext(props) {
   ];
 
   return (
-    <section id="hire-me" className={`${styles["what-next"]}  ${applyThemeClass(theme, styles)} text-center`}>
+    <section
+      id="hire-me"
+      className={`${styles["what-next"]}  ${applyThemeClass(
+        theme,
+        styles
+      )} text-center`}
+    >
       <div className="container">
         <hgroup>
           <p
@@ -105,7 +128,10 @@ export default function WhatNext(props) {
           <a
             href="https://forms.gle/Gow1qUDppr7H42h69"
             target="_blank"
-            className={`${styles["link-to"]} ${applyThemeClass(theme, styles)} text-uppercase mx-auto mt-5`}
+            className={`${styles["link-to"]} ${applyThemeClass(
+              theme,
+              styles
+            )} text-uppercase mx-auto mt-5`}
           >
             write me an email <img src={arrowRight} alt="" />
           </a>

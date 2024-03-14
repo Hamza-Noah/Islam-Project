@@ -34,7 +34,7 @@ function App() {
       <Projects mode={theme} />
       <Careers mode={theme} />
       <About mode={theme} />
-      {/* <WhatNext mode={theme} /> */}
+      <WhatNext mode={theme} />
       <ThemeChanger onThemeChange={handleThemeChange} />
     </div>
   );

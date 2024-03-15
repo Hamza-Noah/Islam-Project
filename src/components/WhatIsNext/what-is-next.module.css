@@ -1,6 +1,6 @@
 .what-next {
   padding: 100px 0 90px;
-  
+
   &.purple {
     background-color: #24262b;
   }
@@ -115,7 +115,7 @@
     background: -webkit-linear-gradient(
       93deg,
       rgba(252, 4, 65, 1) 50%,
-      rgba(246, 45, 168, 1) 100% 
+      rgba(246, 45, 168, 1) 100%
     );
     background: linear-gradient(
       93deg,
@@ -123,28 +123,30 @@
       rgba(246, 45, 168, 1) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fc0441",endColorstr="#f62da8",GradientType=1);
-    
   }
 
   &.dark::after {
-    background: rgb(7,74,255);
+    background: rgb(7, 74, 255);
     background: -moz-linear-gradient(
       93deg,
-      rgba(7,74,255, .5) 50%,
-      rgba(7,74,255, 1) 100%
+      rgba(7, 74, 255, 0.5) 50%,
+      rgba(7, 74, 255, 1) 100%
     );
     background: -webkit-linear-gradient(
       93deg,
-      rgba(7,74,255, .5) 50%,
-      rgba(7,74,255, 1) 100%
+      rgba(7, 74, 255, 0.5) 50%,
+      rgba(7, 74, 255, 1) 100%
     );
     background: linear-gradient(
       93deg,
-      rgba(7,74,255, .5) 50%,
-      rgba(7,74,255, 1) 100%
+      rgba(7, 74, 255, 0.5) 50%,
+      rgba(7, 74, 255, 1) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#074aff",endColorstr="#f62da8",GradientType=1);
-    
+  }
+
+  &.white:after {
+    background: #cf755a;
   }
 
   &:hover {
@@ -155,5 +157,9 @@
     &::after {
       left: 0;
     }
+  }
+
+  &.white:hover {
+    background-color: #eaefe4;
   }
 }

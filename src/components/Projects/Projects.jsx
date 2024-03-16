@@ -5,7 +5,6 @@ import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
 import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
 import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
 
-
 import activeDot from "../../assets/images/active-item.png";
 import unactiveDot from "../../assets/images/unactive-item.png";
 
@@ -26,7 +25,7 @@ export default function Projects(props) {
     const plusIcons = {
       dark: plusIconDark,
       purple: plusIconPurple,
-      white: plusIconWhite
+      white: plusIconWhite,
     };
 
     setPlusIcon(plusIcons[props.mode]);
@@ -42,27 +41,24 @@ export default function Projects(props) {
   }
 
   useEffect(() => {
-    // Load jQuery
     const script1 = document.createElement("script");
     script1.src = "https://code.jquery.com/jquery-3.6.0.min.js"; // Use the version compatible with Owl Carousel
     script1.async = false;
     document.body.appendChild(script1);
 
-    // Load Owl Carousel
     const script2 = document.createElement("script");
     script2.src =
       "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"; // Use the version you installed
     script2.async = false;
     document.body.appendChild(script2);
 
-    // Initialize Owl Carousel once scripts are loaded
     script2.onload = () => {
       $(".owl-carousel").owlCarousel({
         items: 1,
         loop: false,
         margin: 0,
         autoplay: false,
-        autoplaySpeed: 10000, // Set the autoplay speed to 10000 milliseconds (10 seconds)
+        autoplaySpeed: 10000,
         onDragged: handleDragged,
         dots: false,
         nav: false,
@@ -88,7 +84,7 @@ export default function Projects(props) {
 
   return (
     <section className={`${styles.projects} mt-5 pt-5`}>
-      <div className="container">
+      <div className="container position-relative">
         <h2 className={`${styles.title}`}>
           Recent <br /> Projects
           <i className="">
@@ -167,7 +163,7 @@ export default function Projects(props) {
           className={`${styles.dots} dots d-flex justify-content-center mx-auto`}
         >
           <button className="btn p-0 pe-1" onClick={() => goToSlide(0)}>
-            {theme === "purple" && ( 
+            {theme === "purple" && (
               <>
                 {active ? (
                   <img className={styles["btn-dot"]} src={unactiveDot} alt="" />
@@ -177,13 +173,13 @@ export default function Projects(props) {
               </>
             )}
             {theme === "dark" && (
-             <>
-             {active ? (
-              <span className={`${styles["dark-unactive-dot"]}`}></span>
-              ) : (
-                <span className={`${styles["dark-active-dot"]}`}></span>
-             )}
-           </>
+              <>
+                {active ? (
+                  <span className={`${styles["dark-unactive-dot"]}`}></span>
+                ) : (
+                  <span className={`${styles["dark-active-dot"]}`}></span>
+                )}
+              </>
             )}
           </button>
           <button className="btn p-0 ps-1" onClick={() => goToSlide(1)}>
@@ -196,14 +192,14 @@ export default function Projects(props) {
                 )}
               </>
             )}
-             {theme === "dark" && (
-             <>
-             {active ? (
-               <span className={`${styles["dark-active-dot"]}`}></span>
-               ) : (
-                 <span className={`${styles["dark-unactive-dot"]}`}></span>
-             )}
-           </>
+            {theme === "dark" && (
+              <>
+                {active ? (
+                  <span className={`${styles["dark-active-dot"]}`}></span>
+                ) : (
+                  <span className={`${styles["dark-unactive-dot"]}`}></span>
+                )}
+              </>
             )}
           </button>
         </div>
@@ -217,6 +213,9 @@ export default function Projects(props) {
         >
           my behance
         </a>
+        <div className={`${styles.arrow}`}>
+
+        </div>
       </div>
     </section>
   );

@@ -103,11 +103,11 @@ export default function WhatNext(props) {
           </p>
           <h2 className={styles.title}>Let's Work Together.</h2>
         </hgroup>
-        <p>
+        <p className={theme == "white" && styles.white }>
           I'm currently Available for any design systems projects, dashboard
           designs or landing pages gigs
         </p>
-        <p>
+        <p className={theme == "white" && styles.white }>
           If you'd like to talk about a project you want help with or need an
           advice about product design, just drop me{" "}
         </p>

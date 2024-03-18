@@ -26,13 +26,13 @@
   &.white {
     color: #396c54;
   }
-  font-size: 2rem !important;
   @media (max-width: 767px) {
+    font-size: 2rem !important;
     text-align: center;
   }
 
   @media (min-width: 992px) {
-    font-size: 3.125rem;
+    font-size: 3.25rem;
   }
 }
 

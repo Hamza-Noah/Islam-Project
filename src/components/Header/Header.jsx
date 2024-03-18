@@ -51,7 +51,7 @@ export default function Header(props) {
         </div>
       </div>
       <div
-        className={`${theme == "purple" && styles["overlay-on-scroll"]}`}
+        className={`${styles["overlay-on-scroll"]} ${applyThemeClass(theme, styles)}`}
       ></div>
     </section>
   );

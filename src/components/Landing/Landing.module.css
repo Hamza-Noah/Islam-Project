@@ -7,6 +7,10 @@
     background-image: url("../../assets/images/svg/banner.png");
     background-position: right top;
   }
+  &.white {
+    background-image: url("../../assets/images/svg/banner-white.svg");
+    background-position: right top;
+  }
 
   .bg-landing {
     background-size: contain;

@@ -5,6 +5,9 @@ import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
 import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
 import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
 
+import arrowWhite from "../../assets/images/svg/arrow-white.svg";
+import arrowDark from "../../assets/images/svg/arrow-dark.svg";
+
 import activeDot from "../../assets/images/active-item.png";
 import unactiveDot from "../../assets/images/unactive-item.png";
 
@@ -20,6 +23,7 @@ import styles from "./projects.module.css";
 export default function Projects(props) {
   const [theme, setTheme] = useState();
   const [plusIcon, setPlusIcon] = useState();
+  const [arrow, setArrow] = useState();
 
   useEffect(() => {
     const plusIcons = {
@@ -28,6 +32,13 @@ export default function Projects(props) {
       white: plusIconWhite,
     };
 
+    const arrowIcons = {
+      dark: arrowDark,
+      purple: arrowDark,
+      white: arrowWhite,
+    };
+
+    setArrow(arrowIcons[props.mode]);
     setPlusIcon(plusIcons[props.mode]);
     setTheme(props.mode);
   }, [props.mode]);
@@ -213,9 +224,16 @@ export default function Projects(props) {
         >
           my behance
         </a>
-        <div className={`${styles.arrow}`}>
-
-        </div>
+        <button
+          className={`${styles.arrow} ${applyThemeClass(theme, styles)}  ${
+            active == 0 ? styles.right : styles.left
+          }`}
+          onClick={() => {
+            goToSlide(!active);
+          }}
+        >
+          <img src={arrow} alt="" />
+        </button>
       </div>
     </section>
   );

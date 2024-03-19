@@ -32,7 +32,7 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  height: 120px;
+  height: 200px;
 }
 
 .hour {
@@ -48,11 +48,15 @@
   width: 50px;
 }
 
-.hour:hover img,
+img:hover,
 .hour img.active {
   height: 100px;
   object-fit: cover;
   object-position: top;
+}
+
+img.taller {
+  height: 75px;
 }
 
 .hour.active img {
@@ -66,5 +70,16 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  /* Add bubble styling here */
+}
+
+.hourButton {
+  position: relative;
+  left: 50%;
+  transform: translateX(50%);
+  margin-top: 20px;
+  rotate: 180deg;
+}
+
+.hourButton:hover {
+  pointer-events: none !important;
 }

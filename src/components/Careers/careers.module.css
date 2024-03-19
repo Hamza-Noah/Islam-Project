@@ -7,7 +7,17 @@
 .title {
   font-size: 50px;
   font-weight: bolder;
-  color: #9da1b2;
+  &.purple {
+    color: #9da1b2;
+  }
+
+  &.dark {
+    color: #ffffff;
+  }
+
+  &.white {
+    color: #396c54;
+  }
   @media (max-width: 767px) {
     font-size: 2.5rem;
   }
@@ -36,14 +46,12 @@
     background-repeat: no-repeat;
   }
 
-  &.purple  > div::before {
+  &.purple > div::before {
     background-image: url("../../assets/images/svg/role.svg");
   }
-  &.dark  > div::before {
+  &.dark > div::before {
     background-image: url("../../assets/images/svg/role-dark.svg");
   }
-
-  
 }
 
 .roles h3,
@@ -55,7 +63,7 @@
   color: #73827b !important;
 }
 
-.roles.white p:last-child{
+.roles.white p:last-child {
   color: #707070;
 }
 

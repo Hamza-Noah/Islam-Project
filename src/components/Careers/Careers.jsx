@@ -18,6 +18,9 @@ export default function Careers(props) {
       : styles.white;
   }
 
+
+  console.log(applyThemeClass(theme, styles));
+
   useEffect(() => {
     const plusIcons = {
       dark: plusIconDark,
@@ -32,7 +35,7 @@ export default function Careers(props) {
   return (
     <section className={styles.careers}>
       <div className="container">
-        <h2 className={`${styles.title} mb-5`}>
+        <h2 className={`${styles.title} ${applyThemeClass(theme, styles)} mb-5`}>
           Careers
           <i>
             <img src={plusIcon} alt="" />

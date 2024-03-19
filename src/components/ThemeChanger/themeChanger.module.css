@@ -25,34 +25,41 @@
   align-items: center;
   gap: 30px;
   position: relative;
+  transform: rotate(180deg);
 }
 
 .hours {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  height: 120px;
 }
 
 .hour {
   border-radius: 4px 4px 0 0;
   position: relative;
   cursor: pointer;
-
-  img {
-    transition: height 0.3s linear;
-    height: 50px;
-  }
-
-  &:hover {
-    height: 20px;
-    & img {
-      height: 100px;
-    }
-  }
+  width: 50px; /* Set a fixed width */
 }
 
-/* .purple-hour {
-} */
+.hour img {
+  transition: height 0.3s linear;
+  height: 50px;
+  width: 50px;
+}
+
+.hour:hover img,
+.hour img.active {
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.hour.active img {
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+}
 
 .bubble {
   position: absolute;

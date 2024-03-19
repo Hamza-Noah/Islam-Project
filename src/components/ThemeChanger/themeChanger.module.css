@@ -80,6 +80,6 @@ img.taller {
   rotate: 180deg;
 }
 
-.hourButton:hover {
+.hourButton:hover, .hourButton img {
   pointer-events: none !important;
 }

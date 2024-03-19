@@ -14,22 +14,24 @@ export default function ThemeChanger(props) {
   const [theme, setTheme] = useState("");
   const [themeIcon, setThemeIcon] = useState();
 
+  // Define the icons object here
+  const icons = {
+    dark: iconDark,
+    white: iconWhite,
+    purple: iconPurple,
+  };
+
   const handleThemeChange = (themeName, index) => {
     setActiveIndex(index);
     setTheme(themeName);
     props.onThemeChange(themeName);
-    setThemeIcon(icons[theme]);
+    setThemeIcon(icons[theme]); // Now icons is defined before using it
   };
 
   console.log(theme);
 
   useEffect(() => {
-    const icons = {
-      dark: iconDark,
-      white: iconWhite,
-      purple: iconPurple,
-    };
-    // setIcon();
+    // Remove the const keyword from here
     setThemeIcon(icons[theme]);
   }, [theme]);
 

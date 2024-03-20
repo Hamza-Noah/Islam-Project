@@ -1,5 +1,10 @@
 .what-next {
   padding: 100px 0 90px;
+  background-color: #d8d5bf;
+
+  &.white{
+    color: #cf755a;
+  }
 
   &.purple {
     background-color: #24262b;
@@ -16,6 +21,10 @@
       width: 50%;
       margin-inline: auto;
     }
+  }
+
+  &.white h2{
+    color: #396c54;
   }
 }
 
@@ -55,10 +64,18 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #45464b;
   height: 60px;
   width: 60px;
   margin-right: 10px;
+  &.purple {
+    background-color: #45464b;
+  }
+  &.dark {
+    background-color: #262626;
+  }
+  &.white {
+    background-color: #aec1ba;
+  }
   img {
     height: 35px;
   }
@@ -162,8 +179,13 @@
   &.white:hover {
     background-color: #eaefe4;
   }
+
+  img {
+    height: 20px;
+    margin-left: 10px;
+  }
 }
 
-.white{
-  color: #73827b;
+hgroup + .white, hgroup + .white + .white {
+  color: #73827b !important;
 }

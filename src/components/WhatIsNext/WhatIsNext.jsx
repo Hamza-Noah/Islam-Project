@@ -23,6 +23,7 @@ import socialIcon5White from "../../assets/images/svg/social-icon-white-5.svg";
 import socialIcon6White from "../../assets/images/svg/social-icon-white-6.svg";
 
 import arrowRight from "../../assets/images/svg/arrow-right.svg";
+import arrowWhite from "../../assets/images/svg/arrow-right-white.svg";
 
 export default function WhatNext(props) {
   const [theme, setTheme] = useState();
@@ -99,7 +100,7 @@ export default function WhatNext(props) {
               styles
             )} text-uppercase fw-bolder`}
           >
-            What's Next
+            Whats Next
           </p>
           <h2 className={styles.title}>Let's Work Together.</h2>
         </hgroup>
@@ -115,7 +116,7 @@ export default function WhatNext(props) {
           <ul className="d-flex justify-content-center list-unstyled">
             {socialIcons.map((socialIcon, i) => {
               return (
-                <li className={styles.icon} key={i}>
+                <li className={`${styles.icon} ${applyThemeClass(theme, styles)}`}  key={i}>
                   <a href={socialLinks[i]} target="_blank">
                     <img src={socialIcon} />
                   </a>
@@ -133,7 +134,16 @@ export default function WhatNext(props) {
               styles
             )} text-uppercase mx-auto mt-5`}
           >
-            write me an email <img src={arrowRight} alt="" />
+            write me an email 
+           {theme === "dark" &&
+            <img src={arrowRight} alt="" />
+           }
+           {theme === "purple" &&
+            <img src={arrowRight} alt="" />
+           }
+           {theme === "white" &&
+            <img src={arrowWhite} alt="" />
+           }
           </a>
         </div>
       </div>

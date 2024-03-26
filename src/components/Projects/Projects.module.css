@@ -197,25 +197,49 @@
   background: unset;
   border: solid 2px transparent;
   outline: none;
-  height: 140px;
-  width: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  /* background-image: linear-gradient(#fc0441 50% 62% to  #fc0441 50% 52%); */
- 
-  &.white{
+
+  @media (min-width: 575px) and (max-width: 991px) {
+    height: 80px;
+    width: 80px;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    height: 110px;
+    width: 110px;
+  }
+  @media (min-width: 1200px) and (max-width: 1499px) {
+    height: 100px;
+    width: 100px;
+  }
+
+  @media (min-width: 1500px)  {
+    height: 120px;
+    width: 120px;
+  }
+
+  &.white {
     background-color: transparent;
     border: solid 2px #396c54;
-
   }
 
-  &.purple{
-  background-color: rgba(252, 4, 65, 0.35);
-
+  &.purple {
+    background-color: rgba(252, 4, 65, 0.35);
   }
- 
+
+  &.purple:hover {
+    background-color: transparent;
+    border: solid 2px #fc0441;
+  }
+
+  &.white:hover {
+    background-color: transparent;
+    background-color: rgba(57, 108, 84, 0.4);
+    border: solid 3px transparent;
+  }
+
   &.right {
     margin-left: calc(100% - 140px);
     margin-right: 0%;
@@ -227,17 +251,5 @@
     margin-left: 0%;
 
     transform: translateY(-50%) translateX(-60%) rotate(180deg);
-  }
-  &.purple:hover {
-    background-color: transparent;
-    border: solid 2px #fc0441;
-  }
-
-  &.white:hover  {
-    background-color: transparent;
-    background-color: rgba(57, 108, 84, .40);
-    border: solid 3px transparent;
-
-
   }
 }

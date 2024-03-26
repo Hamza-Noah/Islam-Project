@@ -23,7 +23,7 @@ export default function Landing(props) {
           className={`${styles.landing} ${applyThemeClass(theme, styles)}`}
         >
           <div className="row">
-            <div className="col-lg-6 pt-5">
+            <div className="col-lg-6 pt-lg-5">
               <div
                 className={`${styles.info} position-relative pt-5 mt-5 text-white`}
               >
@@ -53,7 +53,7 @@ export default function Landing(props) {
                 </a>
               </div>
             </div>
-            <div className="col">
+            <div className="col d-none d-lg-block">
               {theme === "dark" && (
                 <div className={`h-100 ${styles["bg-landing"]}`}></div>
               )}

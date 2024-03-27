@@ -24,6 +24,7 @@ import socialIcon6White from "../../assets/images/svg/social-icon-white-6.svg";
 
 import arrowRight from "../../assets/images/svg/arrow-right.svg";
 import arrowWhite from "../../assets/images/svg/arrow-right-white.svg";
+import SendMail from "../SendMail";
 
 export default function WhatNext(props) {
   const [theme, setTheme] = useState();
@@ -90,7 +91,7 @@ export default function WhatNext(props) {
       className={`${styles["what-next"]}  ${applyThemeClass(
         theme,
         styles
-      )} text-center`}
+      )} text-center position-relative`}
     >
       <div className="container">
         <hgroup>
@@ -104,11 +105,11 @@ export default function WhatNext(props) {
           </p>
           <h2 className={styles.title}>Let's Work Together.</h2>
         </hgroup>
-        <p className={theme == "white" ? styles.white: ""}>
+        <p className={theme == "white" ? styles.white : ""}>
           I'm currently Available for any design systems projects, dashboard
           designs or landing pages gigs
         </p>
-        <p className={theme == "white" ? styles.white: ""}>
+        <p className={theme == "white" ? styles.white : ""}>
           If you'd like to talk about a project you want help with or need an
           advice about product design, just drop me{" "}
         </p>
@@ -116,7 +117,10 @@ export default function WhatNext(props) {
           <ul className="d-flex justify-content-center list-unstyled">
             {socialIcons.map((socialIcon, i) => {
               return (
-                <li className={`${styles.icon} ${applyThemeClass(theme, styles)}`}  key={i}>
+                <li
+                  className={`${styles.icon} ${applyThemeClass(theme, styles)}`}
+                  key={i}
+                >
                   <a href={socialLinks[i]} target="_blank">
                     <img src={socialIcon} />
                   </a>
@@ -126,25 +130,21 @@ export default function WhatNext(props) {
           </ul>
         </div>
         <div className={`${styles["mail-link"]}`}>
-          <a
-            href="https://forms.gle/Gow1qUDppr7H42h69"
-            target="_blank"
+          <button
             className={`${styles["link-to"]} ${applyThemeClass(
               theme,
               styles
-            )} text-uppercase mx-auto mt-5`}
+            )} text-uppercase mx-auto mt-5"`}
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
           >
-            write me an email 
-           {theme === "dark" &&
-            <img src={arrowRight} alt="" />
-           }
-           {theme === "purple" &&
-            <img src={arrowRight} alt="" />
-           }
-           {theme === "white" &&
-            <img src={arrowWhite} alt="" />
-           }
-          </a>
+            write me an email
+            {theme === "dark" && <img src={arrowRight} alt="" />}
+            {theme === "purple" && <img src={arrowRight} alt="" />}
+            {theme === "white" && <img src={arrowWhite} alt="" />}
+          </button>
+          <SendMail/>
         </div>
       </div>
     </section>

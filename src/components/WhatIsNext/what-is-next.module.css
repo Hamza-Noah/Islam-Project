@@ -2,7 +2,7 @@
   padding: 100px 0 90px;
   background-color: #d8d5bf;
 
-  &.white{
+  &.white {
     color: #cf755a;
   }
 
@@ -23,7 +23,7 @@
     }
   }
 
-  &.white h2{
+  &.white h2 {
     color: #396c54;
   }
 }
@@ -85,6 +85,9 @@
   position: relative;
   padding: 8px;
   color: #707070;
+  background-color: transparent;
+  border: none;
+  outline: none;
   font-size: 1.125rem;
   display: block;
   margin-top: 20px;
@@ -186,6 +189,7 @@
   }
 }
 
-hgroup + .white, hgroup + .white + .white {
+hgroup + .white,
+hgroup + .white + .white {
   color: #73827b !important;
 }

@@ -163,6 +163,7 @@
   }
   button {
     cursor: pointer;
+    border: none;
   }
 }
 
@@ -171,7 +172,9 @@
 }
 
 .dark-active-dot,
-.dark-unactive-dot {
+.dark-unactive-dot,
+.white-active-dot,
+.white-unactive-dot  {
   width: 24px;
   height: 24px;
   display: block;
@@ -182,8 +185,16 @@
   background-color: #074aff;
 }
 
+.white-active-dot {
+  background-color: #396c54;
+}
+
 .dark-unactive-dot {
   background-color: #021a59;
+}
+
+.white-unactive-dot {
+  background-color: #b8c6b6;
 }
 
 .arrow {
@@ -227,6 +238,10 @@
 
   &.purple {
     background-color: rgba(252, 4, 65, 0.35);
+  }
+
+  &.dark{
+    border-color: #02174f;
   }
 
   &.purple:hover {

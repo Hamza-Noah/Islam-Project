@@ -192,6 +192,15 @@ export default function Projects(props) {
                 )}
               </>
             )}
+            {theme === "white" && (
+              <>
+                {active ? (
+                  <span className={`${styles["white-unactive-dot"]}`}></span>
+                ) : (
+                  <span className={`${styles["white-active-dot"]}`}></span>
+                )}
+              </>
+            )}
           </button>
           <button className="btn p-0 ps-1" onClick={() => goToSlide(1)}>
             {theme == "purple" && (
@@ -209,6 +218,15 @@ export default function Projects(props) {
                   <span className={`${styles["dark-active-dot"]}`}></span>
                 ) : (
                   <span className={`${styles["dark-unactive-dot"]}`}></span>
+                )}
+              </>
+            )}
+            {theme === "white" && (
+              <>
+                {active ? (
+                  <span className={`${styles["white-active-dot"]}`}></span>
+                ) : (
+                  <span className={`${styles["white-unactive-dot"]}`}></span>
                 )}
               </>
             )}

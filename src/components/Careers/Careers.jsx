@@ -19,7 +19,6 @@ export default function Careers(props) {
   }
 
 
-  console.log(applyThemeClass(theme, styles));
 
   useEffect(() => {
     const plusIcons = {

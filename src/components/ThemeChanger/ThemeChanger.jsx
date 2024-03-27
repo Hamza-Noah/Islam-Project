@@ -28,7 +28,6 @@ export default function ThemeChanger(props) {
     setThemeIcon(icons[theme]); // Now icons is defined before using it
   };
 
-  console.log(theme);
 
   useEffect(() => {
     // Remove the const keyword from here

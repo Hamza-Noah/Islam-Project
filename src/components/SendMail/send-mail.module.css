@@ -2,19 +2,16 @@
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%);
-  width: 50vw !important;
+  width: 50vw inherit !important ;
 
 }
 
 :global(.modal-dialog) {
-  /* margin-left: 0 !important; */
-  /* margin-right: 0 !important; */
   width: 50vw !important;
   top: 50%;
   transform: translateY(-50%) !important;
 }
 
-/* :global(.modal-body), */
 :global(.modal-content) {
   width: 50vw !important;
   border: none !important;

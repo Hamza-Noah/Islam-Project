@@ -5,10 +5,6 @@
   width: 50vw inherit !important ;
 }
 
-/* :global(.modal) {
-  width: 50vw !important;
-} */
-
 :global(.modal-dialog) {
   min-width: 50vw !important;
   top: 50%;

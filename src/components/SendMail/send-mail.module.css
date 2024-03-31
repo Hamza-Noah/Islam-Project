@@ -48,5 +48,9 @@
 
   button[type="submit"]{
     font-size: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  font-family: Noto Sans, sans-serif;
+    
   }
 }

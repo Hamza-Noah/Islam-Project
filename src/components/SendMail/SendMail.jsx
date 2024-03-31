@@ -62,8 +62,8 @@ export default function SendMail() {
                       errors={state.errors}
                     />
                   </div>
-                  <button type="submit" className="bg-primary text-white fw-bolder py-3 border-0 rounded w-50" disabled={state.submitting}>
-                    Submit Your Message
+                  <button type="submit" className="bg-primary text-white fw-bolder border-0 rounded w-50" disabled={state.submitting}>
+                    Submit your message
                   </button>
                 </form>
               </>

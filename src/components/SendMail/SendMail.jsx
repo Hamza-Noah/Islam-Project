@@ -22,13 +22,14 @@ export default function SendMail() {
               </div>
             ) : (
               <>
-                <h2 className="fw-bolder">Contact Form</h2>
+                <h2 className="fw-bolder mb-4">Contact Form</h2>
                 <form onSubmit={handleSubmit}>
-                <div className="from-group">
+                <div className="from-group mb-3 w-75 mx-auto">
                     <input
                       type="text"
                       name="name"
                       placeholder="Enter Your Name"
+                      className="form-control"
                     />
                     <ValidationError
                       prefix="Name"
@@ -36,11 +37,12 @@ export default function SendMail() {
                       errors={state.errors}
                     />
                   </div>
-                  <div className="from-group">
+                  <div className="from-group mb-3 w-75 mx-auto">
                     <input
                       type="email"
                       name="email"
-                      placeholder="Enter Your Email"
+                      placeholder="Your Email"
+                      className="form-control"
                     />
                     <ValidationError
                       prefix="Email"
@@ -48,10 +50,11 @@ export default function SendMail() {
                       errors={state.errors}
                     />
                   </div>
-                  <div className="from-group">
+                  <div className="from-group mb-3 w-75 mx-auto">
                     <textarea
                       name="message"
                       placeholder="Your Message"
+                      className="form-control"
                     ></textarea>
                     <ValidationError
                       prefix="Message"
@@ -59,7 +62,7 @@ export default function SendMail() {
                       errors={state.errors}
                     />
                   </div>
-                  <button type="submit" disabled={state.submitting}>
+                  <button type="submit" className="bg-primary text-white fw-bolder py-3 border-0 rounded w-50" disabled={state.submitting}>
                     Submit Your Message
                   </button>
                 </form>

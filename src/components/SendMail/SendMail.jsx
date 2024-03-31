@@ -24,6 +24,18 @@ export default function SendMail() {
               <>
                 <h2 className="fw-bolder">Contact Form</h2>
                 <form onSubmit={handleSubmit}>
+                <div className="from-group">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter Your Name"
+                    />
+                    <ValidationError
+                      prefix="Name"
+                      field="name"
+                      errors={state.errors}
+                    />
+                  </div>
                   <div className="from-group">
                     <input
                       type="email"

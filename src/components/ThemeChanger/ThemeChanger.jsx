@@ -59,17 +59,13 @@ export default function ThemeChanger(props) {
     );
   };
 
-
   useEffect(() => {
     // Remove the const keyword from here
     setThemeIcon(icons[theme]);
 
     // renderHour(3, yellowLine, "", "white");
-    handleThemeChange("white", 4)
-
+    handleThemeChange("white", 4);
   }, [theme]);
-
-
 
   return (
     <section className={`${style["theme-container"]} ${style[theme]}`}>

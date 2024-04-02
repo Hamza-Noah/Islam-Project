@@ -18,7 +18,7 @@ function App() {
   };
 
   useEffect(() => {
-    setTheme("dark");
+    setTheme("white");
   }, []);
 
   function applyThemeClass(theme) {

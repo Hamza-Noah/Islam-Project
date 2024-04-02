@@ -28,12 +28,6 @@ export default function ThemeChanger(props) {
     setThemeIcon(icons[theme]); // Now icons is defined before using it
   };
 
-
-  useEffect(() => {
-    // Remove the const keyword from here
-    setThemeIcon(icons[theme]);
-  }, [theme]);
-
   const renderHour = (index, imageSrc, imageAlt, themeName) => {
     const isActive = index === activeIndex && theme === themeName;
     const isPrevActive = index === activeIndex - 1 && theme === themeName;
@@ -64,6 +58,18 @@ export default function ThemeChanger(props) {
       </div>
     );
   };
+
+
+  useEffect(() => {
+    // Remove the const keyword from here
+    setThemeIcon(icons[theme]);
+
+    // renderHour(3, yellowLine, "", "white");
+    handleThemeChange("white", 4)
+
+  }, [theme]);
+
+
 
   return (
     <section className={`${style["theme-container"]} ${style[theme]}`}>

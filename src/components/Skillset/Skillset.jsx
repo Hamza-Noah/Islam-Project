@@ -1,7 +1,7 @@
 import styles from "./skilleset.module.css";
 import { useState, useEffect } from "react";
 
-export default function Skillset(props) {
+export default function Skillset({mode}) {
   const [theme, setTheme] = useState();
 
   function applyThemeClass(theme, styles) {
@@ -13,8 +13,8 @@ export default function Skillset(props) {
   }
 
   useEffect(() => {
-    setTheme(props.mode);
-  }, [props.mode]);
+    setTheme(mode);
+  }, [mode]);
 
   return (
     <>

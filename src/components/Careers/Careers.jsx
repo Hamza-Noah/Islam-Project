@@ -6,7 +6,7 @@ import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
 
 import styles from "./careers.module.css";
 
-export default function Careers(props) {
+export default function Careers({mode}) {
   const [theme, setTheme] = useState();
   const [plusIcon, setPlusIcon] = useState();
 
@@ -27,9 +27,9 @@ export default function Careers(props) {
       white: plusIconWhite,
     };
 
-    setPlusIcon(plusIcons[props.mode]);
-    setTheme(props.mode);
-  }, [props.mode]);
+    setPlusIcon(plusIcons[mode]);
+    setTheme(mode);
+  }, [mode]);
 
   return (
     <section className={styles.careers}>

@@ -11,15 +11,12 @@ import ThemeChanger from "./components/ThemeChanger";
 import "./App.css";
 
 function App() {
-  const [theme, setTheme] = useState("purple");
+  const [theme, setTheme] = useState("white");
 
   const handleThemeChange = (selectedTheme) => {
     setTheme(selectedTheme);
   };
 
-  useEffect(() => {
-    setTheme("white");
-  }, []);
 
   function applyThemeClass(theme) {
     return theme === "purple" ? "purple" : theme === "dark" ? "dark" : "white";

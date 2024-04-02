@@ -5,7 +5,7 @@ import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
 import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
 import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
 
-export default function Process(props) {
+export default function Process({mode}) {
   const [theme, setTheme] = useState();
   const [plusIcon, setPlusIcon] = useState();
 
@@ -15,9 +15,9 @@ export default function Process(props) {
       purple: plusIconPurple,
       white: plusIconWhite,
     };
-    setPlusIcon(plusIcons[props.mode]);
-    setTheme(props.mode);
-  }, [props.mode]);
+    setPlusIcon(plusIcons[mode]);
+    setTheme(mode);
+  }, [mode]);
 
   function applyThemeClass(theme = "purple", styles) {
     return theme === "purple"

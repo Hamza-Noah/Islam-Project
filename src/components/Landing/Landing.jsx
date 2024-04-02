@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./landing.module.css";
 
-export default function Landing(props) {
+export default function Landing({mode}) {
   const [theme, setTheme] = useState();
 
   function applyThemeClass(theme, styles) {
@@ -13,8 +13,8 @@ export default function Landing(props) {
   }
 
   useEffect(() => {
-    setTheme(props.mode);
-  }, [props.mode]);
+    setTheme(mode);
+  }, [mode]);
 
   return (
     <div className="position-relative">

@@ -1,8 +1,7 @@
 import styles from "./about.module.css";
 import { useState, useEffect } from "react";
 
-
-export default function About(props) {
+export default function About({ mode }) {
   const [theme, setTheme] = useState();
 
   function applyThemeClass(theme, styles) {
@@ -12,11 +11,10 @@ export default function About(props) {
       ? styles.dark
       : styles.white;
   }
-  
-  useEffect(() => {
-    setTheme(props.mode);
-  }, [props.mode]);
 
+  useEffect(() => {
+    setTheme(mode);
+  }, [mode]);
 
   return (
     <>
@@ -25,25 +23,43 @@ export default function About(props) {
           <div className="col-lg-6">
             <div className="info-breadcrumb">
               <hgroup>
-                <p className={`${styles["special-color"]} ${applyThemeClass(theme, styles)} fw-bolder`}>
+                <p
+                  className={`${styles["special-color"]} ${applyThemeClass(
+                    theme,
+                    styles
+                  )} fw-bolder`}
+                >
                   ABOUT ME
                 </p>
-                <h2 className={`${styles.title} ${applyThemeClass(theme, styles)}`}>
+                <h2
+                  className={`${styles.title} ${applyThemeClass(
+                    theme,
+                    styles
+                  )}`}
+                >
                   Designing with <br />
                   passion for Problem <br />
                   Solving
                 </h2>
               </hgroup>
               <a
-                href="https://instagram.com/samo.abbes98?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"
-                className={`text-uppercase ${styles["link-to"]} ${applyThemeClass(theme, styles)}`}
+                href="https://instagram.com/samo.abbes98?igshid=OGQ5ZDc2ODk2ZA=="
+                target="_blank"
+                className={`text-uppercase ${
+                  styles["link-to"]
+                } ${applyThemeClass(theme, styles)}`}
               >
                 Follow Me On Instagram
               </a>
             </div>
           </div>
           <div className="col-lg-6">
-            <div className={`${styles["info-details"]} ${applyThemeClass(theme, styles)} text-white pe-lg-5`}>
+            <div
+              className={`${styles["info-details"]} ${applyThemeClass(
+                theme,
+                styles
+              )} text-white pe-lg-5`}
+            >
               <p>
                 I’ve always been passionate about pixels and design projects and
                 haven’t stopped working and learning about new technologies .

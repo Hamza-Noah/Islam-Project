@@ -5,7 +5,7 @@ import logoWhite from "../../assets/images/svg/logo-white.svg";
 import styles from "./Header.module.css";
 import { useState, useEffect } from "react";
 
-export default function Header(props) {
+export default function Header({mode}) {
   const [logo, setLogo] = useState();
   const [theme, setTheme] = useState();
 
@@ -23,9 +23,9 @@ export default function Header(props) {
       white: logoWhite,
       purple: logoPruple,
     };
-    setLogo(logos[props.mode]);
-    setTheme(props.mode);
-  }, [props.mode]);
+    setLogo(logos[mode]);
+    setTheme(mode);
+  }, [mode]);
 
 
   return (

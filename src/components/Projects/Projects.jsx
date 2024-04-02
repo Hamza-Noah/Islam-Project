@@ -20,7 +20,7 @@ import project6 from "../../assets/images/project-6.jpg";
 
 import styles from "./projects.module.css";
 
-export default function Projects(props) {
+export default function Projects({mode}) {
   const [theme, setTheme] = useState();
   const [plusIcon, setPlusIcon] = useState();
   const [arrow, setArrow] = useState();
@@ -38,10 +38,10 @@ export default function Projects(props) {
       white: arrowWhite,
     };
 
-    setArrow(arrowIcons[props.mode]);
-    setPlusIcon(plusIcons[props.mode]);
-    setTheme(props.mode);
-  }, [props.mode]);
+    setArrow(arrowIcons[mode]);
+    setPlusIcon(plusIcons[mode]);
+    setTheme(mode);
+  }, [mode]);
 
   function applyThemeClass(theme = "purple", styles) {
     return theme === "purple"

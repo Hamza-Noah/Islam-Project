@@ -26,7 +26,7 @@ import arrowRight from "../../assets/images/svg/arrow-right.svg";
 import arrowWhite from "../../assets/images/svg/arrow-right-white.svg";
 import SendMail from "../SendMail";
 
-export default function WhatNext(props) {
+export default function WhatNext({mode}) {
   const [theme, setTheme] = useState();
   const [socialIcons, setSocialIcons] = useState([]);
 
@@ -72,9 +72,9 @@ export default function WhatNext(props) {
       white: socialIconsWhite,
     };
 
-    setTheme(props.mode);
-    setSocialIcons(socialIconsItems[props.mode]);
-  }, [props.mode]);
+    setTheme(mode);
+    setSocialIcons(socialIconsItems[mode]);
+  }, [mode]);
 
   const socialLinks = [
     "https://www.linkedin.com/in/eslam-abbes-24727817a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",

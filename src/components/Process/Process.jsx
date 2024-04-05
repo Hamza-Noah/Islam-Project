@@ -40,7 +40,7 @@ export default function Process({ mode }) {
           </h2>
           <div
             className={`${applyThemeClass(theme, styles)}           
-              ${styles["processes"]}  row pt-5 mt-5`}
+              ${styles["processes"]}  row pt-5`}
           >
             <div className="col-lg-6">
               <div className={`${styles.process}`}>

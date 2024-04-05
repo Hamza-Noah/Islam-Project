@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
-import styles from "./process.module.css";
 import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
 import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
 import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
+import styles from "./process.module.css";
 
-export default function Process({mode}) {
+export default function Process({ mode }) {
   const [theme, setTheme] = useState();
   const [plusIcon, setPlusIcon] = useState();
 
@@ -15,6 +15,7 @@ export default function Process({mode}) {
       purple: plusIconPurple,
       white: plusIconWhite,
     };
+
     setPlusIcon(plusIcons[mode]);
     setTheme(mode);
   }, [mode]);

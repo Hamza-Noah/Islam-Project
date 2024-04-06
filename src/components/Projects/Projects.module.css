@@ -174,7 +174,7 @@
 .dark-active-dot,
 .dark-unactive-dot,
 .white-active-dot,
-.white-unactive-dot  {
+.white-unactive-dot {
   width: 24px;
   height: 24px;
   display: block;
@@ -213,10 +213,11 @@
   align-items: center;
   border-radius: 50%;
 
-  @media (min-width: 575px) and (max-width: 991px) {
+  @media (max-width: 991px) {
     height: 80px;
     width: 80px;
   }
+
   @media (min-width: 992px) and (max-width: 1199px) {
     height: 110px;
     width: 110px;
@@ -226,7 +227,7 @@
     width: 100px;
   }
 
-  @media (min-width: 1500px)  {
+  @media (min-width: 1500px) {
     height: 120px;
     width: 120px;
   }
@@ -240,7 +241,7 @@
     background-color: rgba(252, 4, 65, 0.35);
   }
 
-  &.dark{
+  &.dark {
     border-color: #02174f;
   }
 

@@ -17,7 +17,6 @@ function App() {
     setTheme(selectedTheme);
   };
 
-
   function applyThemeClass(theme) {
     return theme === "purple" ? "purple" : theme === "dark" ? "dark" : "white";
   }
@@ -32,7 +31,7 @@ function App() {
       <Careers mode={theme} />
       <About mode={theme} />
       <WhatNext mode={theme} />
-      <ThemeChanger onThemeChange={handleThemeChange} />
+      <ThemeChanger mode={theme} onThemeChange={handleThemeChange} />
     </div>
   );
 }

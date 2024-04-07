@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import style from "./themeChanger.module.css";
+
+import logoPruple from "../../assets/images/svg/logo-purple.svg";
+import logoBlack from "../../assets/images/svg/logo-black.svg";
+import logoWhite from "../../assets/images/svg/logo-white.svg";
 
 import iconPurple from "../../assets/images/svg/purple-theme-icon.svg";
 import iconWhite from "../../assets/images/svg/white-theme-icon.svg";
@@ -8,11 +11,13 @@ import iconDark from "../../assets/images/svg/dark-theme-icon.svg";
 import purpleLine from "../../assets/images/svg/purple-line.svg";
 import blueLine from "../../assets/images/svg/blue-line.svg";
 import yellowLine from "../../assets/images/svg/yellow-line.svg";
+import style from "./themeChanger.module.css";
 
 export default function ThemeChanger(props) {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [theme, setTheme] = useState("");
   const [themeIcon, setThemeIcon] = useState();
+  const [logo, setLogo] = useState();
 
   // Define the icons object here
   const icons = {
@@ -60,9 +65,17 @@ export default function ThemeChanger(props) {
   };
 
   useEffect(() => {
-    // Remove the const keyword from here
+    const logos = {
+      dark: logoBlack,
+      white: logoWhite,
+      purple: logoPruple,
+    };
     setThemeIcon(icons[theme]);
+    setLogo(logos[props["mode"]]);
   }, [theme]);
+
+
+  console.log(logo, props);
 
   useEffect(() => {
     handleThemeChange("white", 4);
@@ -85,6 +98,11 @@ export default function ThemeChanger(props) {
               )}
             </div>
           </div>
+        </div>
+        <div  className="d-flex justify-content-end mt-5">
+          <a href="#">
+            <img height="50px" className={style.logo} src={logo} alt="" />
+          </a>
         </div>
       </div>
     </section>

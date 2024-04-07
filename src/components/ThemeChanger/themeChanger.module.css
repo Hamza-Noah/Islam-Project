@@ -1,5 +1,6 @@
 .theme-container {
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 50px;
 
   &.purple {
     background-color: #171b29;

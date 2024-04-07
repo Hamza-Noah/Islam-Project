@@ -1,4 +1,3 @@
-import React from "react";
 import logoPruple from "../../assets/images/svg/logo-purple.svg";
 import logoBlack from "../../assets/images/svg/logo-black.svg";
 import logoWhite from "../../assets/images/svg/logo-white.svg";

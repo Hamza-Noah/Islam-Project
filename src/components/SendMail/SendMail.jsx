@@ -2,7 +2,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import style from "./send-mail.module.css";
 
 export default function SendMail() {
-  const [state, handleSubmit] = useForm("mwkgrqne");
+  const [state, handleSubmit] = useForm("xbjnpvaz");
 
   return (
     <div

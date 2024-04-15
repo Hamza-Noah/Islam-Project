@@ -19,6 +19,14 @@ export default function ThemeChanger(props) {
   const [themeIcon, setThemeIcon] = useState();
   const [logo, setLogo] = useState();
 
+  function applyThemeClass(theme, style) {
+    return theme === "purple"
+      ? style.purple
+      : theme === "dark"
+      ? style.dark
+      : style.white;
+  }
+
   // Define the icons object here
   const icons = {
     dark: iconDark,
@@ -53,7 +61,7 @@ export default function ThemeChanger(props) {
         />
         {isActive && (
           <button
-            className={`d-block mx-auto  ${style.hourButton} ${style["theme-btn-purple"]}`}
+            className={`d-block mx-auto  ${style.hourButton} ${style["theme-btn-purple"]} ${applyThemeClass(props.mode, style)}`}
           >
             <i>
               <img src={themeIcon} alt="" />
@@ -74,9 +82,6 @@ export default function ThemeChanger(props) {
     setLogo(logos[props["mode"]]);
   }, [theme]);
 
-
-  console.log(logo, props);
-
   useEffect(() => {
     handleThemeChange("white", 4);
   }, []);
@@ -87,19 +92,19 @@ export default function ThemeChanger(props) {
         <div className="theme-settings">
           <div className={style.circadian}>
             <div className={style.hours}>
-              {[...Array(8)].map((_, index) =>
+              {/* {[...Array(8)].map((_, index) =>
                 renderHour(index, blueLine, "", "dark")
-              )}
-              {[...Array(8)].map((_, index) =>
+              )} */}
+              {[...Array(12)].map((_, index) =>
                 renderHour(index, purpleLine, "", "purple")
               )}
-              {[...Array(8)].map((_, index) =>
+              {[...Array(12)].map((_, index) =>
                 renderHour(index, yellowLine, "", "white")
               )}
             </div>
           </div>
         </div>
-        <div  className="d-flex justify-content-end mt-5">
+        <div className="d-flex justify-content-end mt-5">
           <a href="#">
             <img height="50px" className={style.logo} src={logo} alt="" />
           </a>

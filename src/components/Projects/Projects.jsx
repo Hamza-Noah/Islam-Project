@@ -110,7 +110,7 @@ export default function Projects({mode}) {
                   <div className=" position-relative">
                     <img src={project1} alt="" />
                     <div className={`${styles.overlay} position-absolute`}>
-                      <h3 className={`${styles["project-title"]}`}>Steocell</h3>
+                      <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>Steocell</h3>
                     </div>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ export default function Projects({mode}) {
                     <div className=" position-relative">
                       <img src={project2} alt="" />
                       <div className={`${styles.overlay} position-absolute`}>
-                        <h3 className={`${styles["project-title"]}`}>
+                        <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>
                           Werlton
                         </h3>
                       </div>
@@ -129,7 +129,7 @@ export default function Projects({mode}) {
                     <div className=" position-relative">
                       <img src={project6} alt="" />
                       <div className={`${styles.overlay} position-absolute`}>
-                        <h3 className={`${styles["project-title"]}`}>
+                        <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>
                           Xchangewise
                         </h3>
                       </div>
@@ -145,7 +145,7 @@ export default function Projects({mode}) {
                 <div className=" position-relative">
                   <img src={project4} alt="" />
                   <div className={`${styles.overlay} position-absolute`}>
-                    <h3 className={`${styles["project-title"]}`}>Ai Group</h3>
+                    <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>Ai Group</h3>
                   </div>
                 </div>
               </div>
@@ -154,7 +154,7 @@ export default function Projects({mode}) {
                   <div className=" position-relative">
                     <img src={project5} alt="" />
                     <div className={`${styles.overlay} position-absolute`}>
-                      <h3 className={`${styles["project-title"]}`}>UAE</h3>
+                      <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>UAE</h3>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export default function Projects({mode}) {
                   <div className=" position-relative">
                     <img src={project3} alt="" />
                     <div className={`${styles.overlay} position-absolute`}>
-                      <h3 className={`${styles["project-title"]}`}>Neomed</h3>
+                      <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>Neomed</h3>
                     </div>
                   </div>
                 </div>

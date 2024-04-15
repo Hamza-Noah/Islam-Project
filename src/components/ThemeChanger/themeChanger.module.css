@@ -11,13 +11,19 @@
 }
 
 .theme-btn-purple {
-  background-color: #3a3d49;
   border-radius: 50%;
   border: none;
   padding: 28px;
   i img {
     width: 50px;
   }
+}
+
+.theme-btn-purple.white{
+  background-color: #aec1ba;
+}
+.theme-btn-purple.purple{
+  background-color: #3a3d49;
 }
 
 .circadian {

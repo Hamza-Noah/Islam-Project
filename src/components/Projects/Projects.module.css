@@ -66,6 +66,13 @@
   }
 }
 
+.project-title.white::before{
+  background-image: url("../../assets/images/svg/role-white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
 .link-to {
   position: relative;
   padding: 8px;

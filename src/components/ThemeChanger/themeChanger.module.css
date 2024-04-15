@@ -93,3 +93,10 @@ img.taller {
 .hourButton:hover, .hourButton img {
   pointer-events: none !important;
 }
+
+.rights{
+  font-size: 1.25rem;
+  color: #707070;
+  font-family: "Segoe UI";
+
+}

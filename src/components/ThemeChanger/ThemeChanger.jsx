@@ -104,7 +104,8 @@ export default function ThemeChanger(props) {
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-end mt-5">
+        <div className="d-flex justify-content-between align-items-center mt-5">
+          <p className={`${style.rights} m-0`}>Copyright &copy;2024 All rights reserved</p>
           <a href="#">
             <img height="50px" className={style.logo} src={logo} alt="" />
           </a>

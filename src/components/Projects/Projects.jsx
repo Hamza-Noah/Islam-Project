@@ -96,7 +96,7 @@ export default function Projects({mode}) {
   return (
     <section className={`${styles.projects} mt-5 pt-5`}>
       <div className="container position-relative">
-        <h2 className={`${styles.title}`}>
+        <h2 className={`${styles.title} ${applyThemeClass(mode, styles)}`}>
           Recent <br /> Projects
           <i className="">
             <img src={plusIcon} alt="" />

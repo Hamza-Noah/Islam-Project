@@ -38,7 +38,7 @@
 
 .info-details {
   font-size: 1.125rem;
-  &.white p{
+  &.white p {
     color: #73827b;
   }
   @media (max-width: 767px) {
@@ -63,6 +63,9 @@
     font-size: 0.9rem;
     margin: 20px auto 30px;
   }
+  @media (min-width: 768px) and (max-width: 991px) {
+    margin: 20px 0 30px;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -73,7 +76,6 @@
 
     transition: all ease-in 0.3s;
   }
-
 
   &.purple::after {
     background: rgb(252, 4, 65);
@@ -118,8 +120,6 @@
   &.white:after {
     background: #cf755a;
   }
-
-
 
   &:hover {
     margin-left: 20px;

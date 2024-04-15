@@ -52,6 +52,11 @@
   &.dark > div::before {
     background-image: url("../../assets/images/svg/role-dark.svg");
   }
+  &.white > div::before {
+    background-image: url("../../assets/images/svg/role-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .roles h3,

@@ -26,9 +26,13 @@
   &.white {
     color: #396c54;
   }
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
   @media (max-width: 991px) {
     font-size: 2rem !important;
-    text-align: center;
   }
 
   @media (min-width: 992px) {
@@ -75,10 +79,15 @@
     color: #73827b;
   }
 
-  @media (max-width: 991px) {
-    margin-bottom: 40px;
+  @media (max-width: 767px) {
     margin-inline: auto;
   }
+
+  @media (max-width: 991px) {
+    margin-bottom: 40px;
+    margin-top: 200px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -86,9 +95,9 @@
     width: 100%;
     left: 8px;
     bottom: 0;
-
     transition: all ease-in 0.3s;
   }
+
   &.purple::after {
     background: rgb(252, 4, 65);
     background: -moz-linear-gradient(

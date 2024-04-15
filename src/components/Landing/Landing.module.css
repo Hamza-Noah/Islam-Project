@@ -11,10 +11,12 @@
     background-image: url("../../assets/images/svg/banner-white.svg");
     background-position: right top;
   }
-  
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    background-position: right;
+  }
   @media (max-width: 991px) {
     background-image: url("../../assets/images/banner-black.jpg");
-    
   }
 
   .bg-landing {
@@ -28,6 +30,19 @@
     right: 0;
   }
 
+  @media (max-width: 767px) {
+    background-position-x: center !important;
+    .info {
+      padding-top: 550px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .info {
+      padding-top: 400px;
+    }
+  }
+
   .bow {
     font-size: 20px;
 
@@ -36,7 +51,6 @@
     }
   }
   @media (max-width: 767px) {
-    padding-top: 120px;
     .bow {
       font-size: 1.5rem;
       text-align: center;
@@ -90,10 +104,16 @@
   &.white {
     color: #f1ecda;
   }
-}
 
-@media (min-width: 1200px) {
-  .job-title {
+  @media (max-width: 991px) {
+    display: none !important;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    font-size: 5rem;
+  }
+
+  @media (min-width: 1200px) {
     font-size: 7rem;
     font-weight: bolder;
     top: 0;

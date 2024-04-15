@@ -23,15 +23,15 @@ export default function Landing({mode}) {
           className={`${styles.landing} ${applyThemeClass(theme, styles)}`}
         >
           <div className="row">
-            <div className="col-lg-6 pt-lg-5">
+            <div className="col-md-6 pt-5">
               <div
-                className={`${styles.info} position-relative pt-5 mt-5 text-white`}
+                className={`${styles.info} position-relative text-white`}
               >
                 <p
-                  className={`${styles["job-title"]} ${applyThemeClass(theme, styles)}  position-absolute d-none d-lg-flex  flex-column`}
+                  className={`${styles["job-title"]} ${applyThemeClass(theme, styles)}  position-absolute d-flex  flex-column`}
                 >
                   <span>Product</span>
-                  <span className="ps-lg-5">Desiner</span>
+                  <span className="ps-lg-5">Designer</span>
                 </p>
                 <div className="position-relative">
                   <p className={`${styles.bow} ${theme == "white" ? styles.white : ""} fw-bolder`}>Hello it's me</p>

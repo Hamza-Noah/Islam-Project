@@ -5,9 +5,6 @@ import applyThemeClass from "../../Services/applyThemeClass.js";
 export default function About({ mode }) {
   const [theme, setTheme] = useState();
 
-  applyThemeClass("dark", styles);
-
-
   useEffect(() => {
     setTheme(mode);
   }, [mode]);

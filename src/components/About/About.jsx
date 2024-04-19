@@ -1,16 +1,12 @@
 import styles from "./about.module.css";
 import { useState, useEffect } from "react";
+import applyThemeClass from "../../Services/applyThemeClass.js";
 
 export default function About({ mode }) {
   const [theme, setTheme] = useState();
 
-  function applyThemeClass(theme, styles) {
-    return theme === "purple"
-      ? styles.purple
-      : theme === "dark"
-      ? styles.dark
-      : styles.white;
-  }
+  applyThemeClass("dark", styles);
+
 
   useEffect(() => {
     setTheme(mode);

@@ -2,19 +2,13 @@ import logoPruple from "../../assets/images/svg/logo-purple.svg";
 import logoBlack from "../../assets/images/svg/logo-black.svg";
 import logoWhite from "../../assets/images/svg/logo-white.svg";
 import styles from "./Header.module.css";
+import applyThemeClass from "../../Services/applyThemeClass.js";
+
 import { useState, useEffect } from "react";
 
-export default function Header({mode}) {
+export default function Header({ mode }) {
   const [logo, setLogo] = useState();
   const [theme, setTheme] = useState();
-
-  function applyThemeClass(theme, styles) {
-    return theme === "purple"
-      ? styles.purple
-      : theme === "dark"
-      ? styles.dark
-      : styles.white;
-  }
 
   useEffect(() => {
     const logos = {
@@ -25,7 +19,6 @@ export default function Header({mode}) {
     setLogo(logos[mode]);
     setTheme(mode);
   }, [mode]);
-
 
   return (
     <section className={`${styles.header}`}>
@@ -50,7 +43,10 @@ export default function Header({mode}) {
         </div>
       </div>
       <div
-        className={`${styles["overlay-on-scroll"]} ${applyThemeClass(theme, styles)}`}
+        className={`${styles["overlay-on-scroll"]} ${applyThemeClass(
+          theme,
+          styles
+        )}`}
       ></div>
     </section>
   );

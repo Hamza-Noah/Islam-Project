@@ -12,20 +12,13 @@ import purpleLine from "../../assets/images/svg/purple-line.svg";
 import blueLine from "../../assets/images/svg/blue-line.svg";
 import yellowLine from "../../assets/images/svg/yellow-line.svg";
 import style from "./themeChanger.module.css";
+import applyThemeClass from "../../Services/applyThemeClass.js";
 
 export default function ThemeChanger(props) {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [theme, setTheme] = useState("");
   const [themeIcon, setThemeIcon] = useState();
   const [logo, setLogo] = useState();
-
-  function applyThemeClass(theme, style) {
-    return theme === "purple"
-      ? style.purple
-      : theme === "dark"
-      ? style.dark
-      : style.white;
-  }
 
   // Define the icons object here
   const icons = {
@@ -61,7 +54,9 @@ export default function ThemeChanger(props) {
         />
         {isActive && (
           <button
-            className={`d-block mx-auto  ${style.hourButton} ${style["theme-btn-purple"]} ${applyThemeClass(props.mode, style)}`}
+            className={`d-block mx-auto  ${style.hourButton} ${
+              style["theme-btn-purple"]
+            } ${applyThemeClass(props.mode, style)}`}
           >
             <i>
               <img src={themeIcon} alt="" />
@@ -105,7 +100,9 @@ export default function ThemeChanger(props) {
           </div>
         </div>
         <div className="d-flex justify-content-between align-items-center mt-5">
-          <p className={`${style.rights} m-0`}>Copyright &copy;2024 All rights reserved</p>
+          <p className={`${style.rights} m-0`}>
+            Copyright &copy;2024 All rights reserved
+          </p>
           <a href="#">
             <img height="50px" className={style.logo} src={logo} alt="" />
           </a>

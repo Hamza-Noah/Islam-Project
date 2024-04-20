@@ -1,16 +1,9 @@
 import { useState, useEffect } from "react";
 import styles from "./landing.module.css";
+import applyThemeClass from "../../Services/applyThemeClass.js";
 
-export default function Landing({mode}) {
+export default function Landing({ mode }) {
   const [theme, setTheme] = useState();
-
-  function applyThemeClass(theme, styles) {
-    return theme === "purple"
-      ? styles.purple
-      : theme === "dark"
-      ? styles.dark
-      : styles.white;
-  }
 
   useEffect(() => {
     setTheme(mode);
@@ -24,21 +17,37 @@ export default function Landing({mode}) {
         >
           <div className="row">
             <div className="col-md-6 pt-5">
-              <div
-                className={`${styles.info} position-relative text-white`}
-              >
+              <div className={`${styles.info} position-relative text-white`}>
                 <p
-                  className={`${styles["job-title"]} ${applyThemeClass(theme, styles)}  position-absolute d-flex  flex-column`}
+                  className={`${styles["job-title"]} ${applyThemeClass(
+                    theme,
+                    styles
+                  )}  position-absolute d-flex  flex-column`}
                 >
                   <span>Product</span>
                   <span className="ps-lg-5">Designer</span>
                 </p>
                 <div className="position-relative">
-                  <p className={`${styles.bow} ${theme == "white" ? styles.white : ""} fw-bolder`}>Hello it's me</p>
-                  <h1 className={`${(styles.title, styles["designer-name"])} ${applyThemeClass(theme, styles)}`}>
+                  <p
+                    className={`${styles.bow} ${
+                      theme == "white" ? styles.white : ""
+                    } fw-bolder`}
+                  >
+                    Hello it's me
+                  </p>
+                  <h1
+                    className={`${
+                      (styles.title, styles["designer-name"])
+                    } ${applyThemeClass(theme, styles)}`}
+                  >
                     Eslam Abbas
                   </h1>
-                  <p className={`${styles.details} ${applyThemeClass(theme, styles)}`}>
+                  <p
+                    className={`${styles.details} ${applyThemeClass(
+                      theme,
+                      styles
+                    )}`}
+                  >
                     An enthusiastic product designer currently shaping the
                     future of software development by designing smooth
                     user-interfaces that promote user interaction with
@@ -47,7 +56,9 @@ export default function Landing({mode}) {
                 </div>
                 <a
                   href="#skillset"
-                  className={`text-uppercase ${styles["link-to"]} ${applyThemeClass(theme, styles)}`}
+                  className={`text-uppercase ${
+                    styles["link-to"]
+                  } ${applyThemeClass(theme, styles)}`}
                 >
                   scroll for more
                 </a>

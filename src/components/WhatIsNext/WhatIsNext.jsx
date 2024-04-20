@@ -25,18 +25,11 @@ import socialIcon6White from "../../assets/images/svg/social-icon-white-6.svg";
 import arrowRight from "../../assets/images/svg/arrow-right.svg";
 import arrowWhite from "../../assets/images/svg/arrow-right-white.svg";
 import SendMail from "../SendMail";
+import applyThemeClass from "../../Services/applyThemeClass.js";
 
-export default function WhatNext({mode}) {
+export default function WhatNext({ mode }) {
   const [theme, setTheme] = useState();
   const [socialIcons, setSocialIcons] = useState([]);
-
-  function applyThemeClass(theme, styles) {
-    return theme === "purple"
-      ? styles.purple
-      : theme === "dark"
-      ? styles.dark
-      : styles.white;
-  }
 
   const socialIconsPurple = [
     socialIcon1Purple,
@@ -144,7 +137,7 @@ export default function WhatNext({mode}) {
             {theme === "purple" && <img src={arrowRight} alt="" />}
             {theme === "white" && <img src={arrowWhite} alt="" />}
           </button>
-          <SendMail/>
+          <SendMail />
         </div>
       </div>
     </section>

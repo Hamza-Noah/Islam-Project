@@ -19,6 +19,8 @@ import project5 from "../../assets/images/project-5.jpg";
 import project6 from "../../assets/images/project-6.jpg";
 
 import styles from "./projects.module.css";
+import applyThemeClass from "../../Services/applyThemeClass.js";
+
 
 export default function Projects({mode}) {
   const [theme, setTheme] = useState();
@@ -43,13 +45,6 @@ export default function Projects({mode}) {
     setTheme(mode);
   }, [mode]);
 
-  function applyThemeClass(theme = "purple", styles) {
-    return theme === "purple"
-      ? styles.purple
-      : theme === "dark"
-      ? styles.dark
-      : styles.white;
-  }
 
   useEffect(() => {
     const script1 = document.createElement("script");

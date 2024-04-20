@@ -5,20 +5,11 @@ import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
 import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
 
 import styles from "./careers.module.css";
+import applyThemeClass from "../../Services/applyThemeClass.js";
 
-export default function Careers({mode}) {
+export default function Careers({ mode }) {
   const [theme, setTheme] = useState();
   const [plusIcon, setPlusIcon] = useState();
-
-  function applyThemeClass(theme, styles) {
-    return theme === "purple"
-      ? styles.purple
-      : theme === "dark"
-      ? styles.dark
-      : styles.white;
-  }
-
-
 
   useEffect(() => {
     const plusIcons = {
@@ -34,7 +25,9 @@ export default function Careers({mode}) {
   return (
     <section className={styles.careers}>
       <div className="container">
-        <h2 className={`${styles.title} ${applyThemeClass(theme, styles)} mb-5`}>
+        <h2
+          className={`${styles.title} ${applyThemeClass(theme, styles)} mb-5`}
+        >
           Careers
           <i>
             <img src={plusIcon} alt="" />

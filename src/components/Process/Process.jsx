@@ -4,6 +4,7 @@ import plusIconPurple from "../../assets/images/svg/plus-icon.svg";
 import plusIconDark from "../../assets/images/svg/plus-icon-dark.svg";
 import plusIconWhite from "../../assets/images/svg/plus-icon-white.svg";
 import styles from "./process.module.css";
+import applyThemeClass from "../../Services/applyThemeClass.js";
 
 export default function Process({ mode }) {
   const [theme, setTheme] = useState();
@@ -19,14 +20,6 @@ export default function Process({ mode }) {
     setPlusIcon(plusIcons[mode]);
     setTheme(mode);
   }, [mode]);
-
-  function applyThemeClass(theme = "purple", styles) {
-    return theme === "purple"
-      ? styles.purple
-      : theme === "dark"
-      ? styles.dark
-      : styles.white;
-  }
 
   return (
     <>

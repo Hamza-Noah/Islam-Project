@@ -1,16 +1,9 @@
 import styles from "./skilleset.module.css";
 import { useState, useEffect } from "react";
+import applyThemeClass from "../../Services/applyThemeClass.js";
 
-export default function Skillset({mode}) {
+export default function Skillset({ mode }) {
   const [theme, setTheme] = useState();
-
-  function applyThemeClass(theme, styles) {
-    return theme === "purple"
-      ? styles.purple
-      : theme === "dark"
-      ? styles.dark
-      : styles.white;
-  }
 
   useEffect(() => {
     setTheme(mode);
@@ -24,11 +17,18 @@ export default function Skillset({mode}) {
             <div className="col-lg-6">
               <hgroup>
                 <p
-                  className={`${styles["special-color"]}  ${applyThemeClass(theme, styles)} fw-bolder text-uppercase`}
+                  className={`${styles["special-color"]}  ${applyThemeClass(
+                    theme,
+                    styles
+                  )} fw-bolder text-uppercase`}
                 >
                   my skillset
                 </p>
-                <h2 className={`${styles["title-color"]}  ${theme == "white" ? styles.white : ""} fw-bolder`}>
+                <h2
+                  className={`${styles["title-color"]}  ${
+                    theme == "white" ? styles.white : ""
+                  } fw-bolder`}
+                >
                   <span className="d-block">Graphic Design,</span>
                   <span className="d-block">Interface Design &</span>
                   <span className="d-block">User Experince</span>
@@ -44,7 +44,9 @@ export default function Skillset({mode}) {
               </a>
             </div>
             <div className="col-lg-6">
-              <div className={`${styles.info} ${applyThemeClass(theme, styles)}`}>
+              <div
+                className={`${styles.info} ${applyThemeClass(theme, styles)}`}
+              >
                 <p className="pe-lg-5 text-center text-lg-start">
                   I specialize in building complex web applications, leading
                   front-end teams, digital product design and developing visual

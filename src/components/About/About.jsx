@@ -1,6 +1,7 @@
 import styles from "./about.module.css";
 import { useState, useEffect } from "react";
 import applyThemeClass from "../../Services/applyThemeClass.js";
+import LinkTo from "../LinkTo/LinkTo.jsx";
 
 export default function About({ mode }) {
   const [theme, setTheme] = useState();
@@ -35,15 +36,11 @@ export default function About({ mode }) {
                   Solving
                 </h2>
               </hgroup>
-              <a
-                href="https://instagram.com/samo.abbes98?igshid=OGQ5ZDc2ODk2ZA=="
-                target="_blank"
-                className={`text-uppercase ${
-                  styles["link-to"]
-                } ${applyThemeClass(theme, styles)}`}
-              >
-                Follow Me On Instagram
-              </a>
+              <LinkTo
+                linkTo="https://instagram.com/samo.abbes98?igshid=OGQ5ZDc2ODk2ZA=="
+                text="Follow Me On Instagram"
+                blank={true}
+              />
             </div>
           </div>
           <div className="col-lg-6">

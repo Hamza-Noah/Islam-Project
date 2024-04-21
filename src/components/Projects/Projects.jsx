@@ -20,9 +20,9 @@ import project6 from "../../assets/images/project-6.jpg";
 
 import styles from "./projects.module.css";
 import applyThemeClass from "../../Services/applyThemeClass.js";
+import LinkTo from "../LinkTo/LinkTo.jsx";
 
-
-export default function Projects({mode}) {
+export default function Projects({ mode }) {
   const [theme, setTheme] = useState();
   const [plusIcon, setPlusIcon] = useState();
   const [arrow, setArrow] = useState();
@@ -44,7 +44,6 @@ export default function Projects({mode}) {
     setPlusIcon(plusIcons[mode]);
     setTheme(mode);
   }, [mode]);
-
 
   useEffect(() => {
     const script1 = document.createElement("script");
@@ -105,7 +104,13 @@ export default function Projects({mode}) {
                   <div className=" position-relative">
                     <img src={project1} alt="" />
                     <div className={`${styles.overlay} position-absolute`}>
-                      <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>Steocell</h3>
+                      <h3
+                        className={`${
+                          styles["project-title"]
+                        } ${applyThemeClass(theme, styles)}`}
+                      >
+                        Steocell
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -114,7 +119,11 @@ export default function Projects({mode}) {
                     <div className=" position-relative">
                       <img src={project2} alt="" />
                       <div className={`${styles.overlay} position-absolute`}>
-                        <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>
+                        <h3
+                          className={`${
+                            styles["project-title"]
+                          } ${applyThemeClass(theme, styles)}`}
+                        >
                           Werlton
                         </h3>
                       </div>
@@ -124,7 +133,11 @@ export default function Projects({mode}) {
                     <div className=" position-relative">
                       <img src={project6} alt="" />
                       <div className={`${styles.overlay} position-absolute`}>
-                        <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>
+                        <h3
+                          className={`${
+                            styles["project-title"]
+                          } ${applyThemeClass(theme, styles)}`}
+                        >
                           Xchangewise
                         </h3>
                       </div>
@@ -140,7 +153,14 @@ export default function Projects({mode}) {
                 <div className=" position-relative">
                   <img src={project4} alt="" />
                   <div className={`${styles.overlay} position-absolute`}>
-                    <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>Ai Group</h3>
+                    <h3
+                      className={`${styles["project-title"]} ${applyThemeClass(
+                        theme,
+                        styles
+                      )}`}
+                    >
+                      Ai Group
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -149,7 +169,13 @@ export default function Projects({mode}) {
                   <div className=" position-relative">
                     <img src={project5} alt="" />
                     <div className={`${styles.overlay} position-absolute`}>
-                      <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>UAE</h3>
+                      <h3
+                        className={`${
+                          styles["project-title"]
+                        } ${applyThemeClass(theme, styles)}`}
+                      >
+                        UAE
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -157,7 +183,13 @@ export default function Projects({mode}) {
                   <div className=" position-relative">
                     <img src={project3} alt="" />
                     <div className={`${styles.overlay} position-absolute`}>
-                      <h3 className={`${styles["project-title"]} ${applyThemeClass(theme, styles)}`}>Neomed</h3>
+                      <h3
+                        className={`${
+                          styles["project-title"]
+                        } ${applyThemeClass(theme, styles)}`}
+                      >
+                        Neomed
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -227,16 +259,11 @@ export default function Projects({mode}) {
             )}
           </button>
         </div>
-        <a
-          href="https://www.behance.net/samo_abbas19"
-          target="_blank"
-          className={`text-uppercase ${styles["link-to"]} ${applyThemeClass(
-            theme,
-            styles
-          )}`}
-        >
-          my behance
-        </a>
+        <LinkTo
+          linkTo="https://www.behance.net/samo_abbas19"
+          text="my behance"
+          blank={true}
+        />
         <button
           className={`${styles.arrow} ${applyThemeClass(theme, styles)}  ${
             active == 0 ? styles.right : styles.left

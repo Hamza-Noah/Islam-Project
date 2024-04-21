@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./landing.module.css";
 import applyThemeClass from "../../Services/applyThemeClass.js";
+import LinkTo from "../LinkTo/LinkTo.jsx";
 
 export default function Landing({ mode }) {
   const [theme, setTheme] = useState();
@@ -54,14 +55,7 @@ export default function Landing({ mode }) {
                     information and data. While traveling around the world.
                   </p>
                 </div>
-                <a
-                  href="#skillset"
-                  className={`text-uppercase ${
-                    styles["link-to"]
-                  } ${applyThemeClass(theme, styles)}`}
-                >
-                  scroll for more
-                </a>
+                <LinkTo linkTo="#skillset" text="scroll for more" />
               </div>
             </div>
             <div className="col d-none d-lg-block">

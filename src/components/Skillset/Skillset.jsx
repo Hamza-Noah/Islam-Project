@@ -1,6 +1,7 @@
 import styles from "./skilleset.module.css";
 import { useState, useEffect } from "react";
 import applyThemeClass from "../../Services/applyThemeClass.js";
+import LinkTo from "../LinkTo/LinkTo.jsx";
 
 export default function Skillset({ mode }) {
   const [theme, setTheme] = useState();
@@ -34,14 +35,7 @@ export default function Skillset({ mode }) {
                   <span className="d-block">User Experince</span>
                 </h2>
               </hgroup>
-              <a
-                href="#process"
-                className={`text-uppercase ${
-                  styles["link-to"]
-                } ${applyThemeClass(theme, styles)}`}
-              >
-                my process
-              </a>
+              <LinkTo linkTo="#process" text="my process" />
             </div>
             <div className="col-lg-6">
               <div

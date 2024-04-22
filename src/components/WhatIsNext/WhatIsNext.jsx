@@ -30,6 +30,7 @@ import applyThemeClass from "../../Services/applyThemeClass.js";
 export default function WhatNext({ mode }) {
   const [theme, setTheme] = useState();
   const [socialIcons, setSocialIcons] = useState([]);
+  const [arrow, setArrow] = useState();
 
   const socialIconsPurple = [
     socialIcon1Purple,
@@ -65,8 +66,15 @@ export default function WhatNext({ mode }) {
       white: socialIconsWhite,
     };
 
+    const arrows = {
+      white: arrowWhite,
+      dark: arrowRight,
+      purple: arrowRight,
+    };
+
     setTheme(mode);
     setSocialIcons(socialIconsItems[mode]);
+    setArrow(arrows[mode]);
   }, [mode]);
 
   const socialLinks = [
@@ -133,9 +141,7 @@ export default function WhatNext({ mode }) {
             data-bs-target="#exampleModal"
           >
             write me an email
-            {theme === "dark" && <img src={arrowRight} alt="" />}
-            {theme === "purple" && <img src={arrowRight} alt="" />}
-            {theme === "white" && <img src={arrowWhite} alt="" />}
+            <img src={arrow} alt={arrow} />
           </button>
           <SendMail />
         </div>

@@ -259,11 +259,14 @@ export default function Projects({ mode }) {
             )}
           </button>
         </div>
+        <div className={styles["link-to"]}>
+
         <LinkTo
           linkTo="https://www.behance.net/samo_abbas19"
           text="my behance"
           blank={true}
-        />
+          />
+          </div>
         <button
           className={`${styles.arrow} ${applyThemeClass(theme, styles)}  ${
             active == 0 ? styles.right : styles.left

@@ -79,7 +79,7 @@
 }
 
 .link-to {
-  position: relative;
+  /* position: relative;
   padding: 8px;
   color: #707070;
   font-size: 1.125rem;
@@ -88,14 +88,15 @@
   width: fit-content;
   word-spacing: 3px;
   letter-spacing: 3px;
-  transition: all ease-in 0.3s;
+  transition: all ease-in 0.3s; */
   transform: translateY(-180px);
-  z-index: 3;
+  /* z-index: 3;
   @media (max-width: 767px) {
     transform: translateY(80px);
     margin-bottom: 100px;
     display: none;
   }
+ 
   &::after {
     content: "";
     position: absolute;
@@ -162,7 +163,7 @@
 
   &.white:hover {
     background-color: #eaefe4;
-  }
+  } */
 }
 
 .dots {

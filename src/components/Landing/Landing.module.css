@@ -6,10 +6,21 @@
   &.purple {
     background-image: url("../../assets/images/svg/banner.png");
     background-position: right top;
+
+ 
   }
   &.white {
     background-image: url("../../assets/images/svg/banner-white.svg");
     background-position: right top;
+    @media (max-width: 767px) {
+      background-size: 80%;
+      background-image: url("../../assets/images/svg/landing-mobile-purple.jpeg") !important; 
+   }
+
+   @media (max-width: 480px) {
+    background-size: 90%;
+
+   }
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
@@ -43,6 +54,11 @@
     }
   }
 
+  @media (max-width: 480px) {
+    .info {
+      padding-top: 350px;
+    }
+  }
   .bow {
     font-size: 20px;
 
@@ -110,7 +126,7 @@
     color: #f1ecda;
   }
 
-  @media (max-width: 991px) {
+  @media (min-width: 768px) and (max-width: 991px) {
     display: none !important;
   }
 

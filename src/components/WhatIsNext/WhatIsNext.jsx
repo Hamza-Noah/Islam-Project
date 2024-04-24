@@ -26,6 +26,7 @@ import arrowRight from "../../assets/images/svg/arrow-right.svg";
 import arrowWhite from "../../assets/images/svg/arrow-right-white.svg";
 import SendMail from "../SendMail";
 import applyThemeClass from "../../Services/applyThemeClass.js";
+import LinkTo from "../LinkTo/LinkTo.jsx";
 
 export default function WhatNext({ mode }) {
   const [theme, setTheme] = useState();
@@ -143,6 +144,9 @@ export default function WhatNext({ mode }) {
             write me an email
             <img src={arrow} alt={arrow} />
           </button>
+          <div className="d-flex justify-content-center mt-3">
+           <a className="text-decoration-underline text-secondary" href="#" target="_blank">Pay From Here</a>
+          </div>
           <SendMail />
         </div>
       </div>

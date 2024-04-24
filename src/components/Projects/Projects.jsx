@@ -265,6 +265,7 @@ export default function Projects({ mode }) {
           linkTo="https://www.behance.net/samo_abbas19"
           text="my behance"
           blank={true}
+          mode={mode}
           />
           </div>
         <button

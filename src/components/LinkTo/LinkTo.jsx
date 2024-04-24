@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./LinkTo.module.css";
 import applyThemeClass from "../../Services/applyThemeClass.js";
+import { useEffect } from "react";
 
-export default function LinkTo({linkTo, text, mode, blank = false }) {
-  console.log(text);
+export default function LinkTo({ linkTo, text, mode, blank = false }) {
+
+
   return (
     <>
       <a

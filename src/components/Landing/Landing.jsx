@@ -25,8 +25,8 @@ export default function Landing({ mode }) {
                     styles
                   )}  position-absolute d-flex  flex-column`}
                 >
-                  <span>Product</span>
-                  <span className="ps-lg-5">Designer</span>
+                  <span className="ps-3 ps-md-0">Product</span>
+                  <span className="ps-5">Designer</span>
                 </p>
                 <div className="position-relative">
                   <p
@@ -55,7 +55,8 @@ export default function Landing({ mode }) {
                     information and data. While traveling around the world.
                   </p>
                 </div>
-                <LinkTo linkTo="#skillset" text="scroll for more" />
+                <LinkTo linkTo="#skillset" text="scroll for more"
+                 mode={mode} />
               </div>
             </div>
             <div className="col d-none d-lg-block">

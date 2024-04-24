@@ -40,6 +40,7 @@ export default function About({ mode }) {
                 linkTo="https://instagram.com/samo.abbes98?igshid=OGQ5ZDc2ODk2ZA=="
                 text="Follow Me On Instagram"
                 blank={true}
+                mode={mode}
               />
             </div>
           </div>

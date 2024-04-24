@@ -35,7 +35,7 @@ export default function Skillset({ mode }) {
                   <span className="d-block">User Experince</span>
                 </h2>
               </hgroup>
-              <LinkTo linkTo="#process" text="my process" />
+              <LinkTo linkTo="#process" text="my process"  mode={mode}/>
             </div>
             <div className="col-lg-6">
               <div

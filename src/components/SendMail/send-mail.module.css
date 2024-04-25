@@ -12,7 +12,7 @@
 }
 
 :global(.modal-content) {
-  width: 50vw !important;
+  /* width: 50vw !important; */
   border: none !important;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;

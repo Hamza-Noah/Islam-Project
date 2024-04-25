@@ -4,8 +4,6 @@ import applyThemeClass from "../../Services/applyThemeClass.js";
 import { useEffect } from "react";
 
 export default function LinkTo({ linkTo, text, mode, blank = false }) {
-
-
   return (
     <>
       <a

@@ -46,12 +46,20 @@
     background-repeat: no-repeat;
   }
 
+  @media (max-width: 767px) {
+    & > div::before {
+      top: 35%;
+    }
+  }
+
   &.purple > div::before {
     background-image: url("../../assets/images/svg/role.svg");
   }
+
   &.dark > div::before {
     background-image: url("../../assets/images/svg/role-dark.svg");
   }
+
   &.white > div::before {
     background-image: url("../../assets/images/svg/role-white.svg");
     background-size: contain;
@@ -63,6 +71,7 @@
 .roles .role-name {
   color: white !important;
 }
+
 .roles.white h3,
 .roles.white .role-name {
   color: #73827b !important;

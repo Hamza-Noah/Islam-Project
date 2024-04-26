@@ -147,7 +147,7 @@ export default function WhatNext({ mode }) {
           <div className="d-flex justify-content-center mt-3">
            <a className="text-decoration-underline text-secondary" href="#" target="_blank">Pay From Here</a>
           </div>
-          <SendMail />
+          <SendMail theme={mode}/>
         </div>
       </div>
     </section>

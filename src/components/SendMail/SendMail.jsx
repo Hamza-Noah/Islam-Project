@@ -1,6 +1,7 @@
 import { useForm, ValidationError } from "@formspree/react";
-import style from "./send-mail.module.css";
 import applyThemeClass from "../../Services/applyThemeClass.js";
+import style from "./send-mail.module.css";
+import { useEffect } from "react";
 
 export default function SendMail({ theme }) {
   const [state, handleSubmit] = useForm("xbjnpvaz");

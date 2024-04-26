@@ -8,7 +8,7 @@ export default function LinkTo({ linkTo, text, mode, blank = false }) {
     <>
       <a
         href={linkTo}
-        target={blank && "_blank"}
+        target={blank ? "_blank" : ""}
         className={`text-uppercase ${styles["link-to"]} ${applyThemeClass(
           mode,
           styles

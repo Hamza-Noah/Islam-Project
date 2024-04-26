@@ -10,7 +10,7 @@
   font-size: 50px;
   font-weight: bolder;
   color: #9da1b2;
-  &.white{
+  &.white {
     color: #396c54 !important;
   }
 
@@ -58,8 +58,6 @@
     background-repeat: no-repeat;
   }
 
-  
-
   &:hover {
     opacity: 1;
   }
@@ -71,99 +69,16 @@
   }
 }
 
-.project-title.white::before{
+.project-title.white::before {
   background-image: url("../../assets/images/svg/role-white.svg");
   background-size: contain;
   background-repeat: no-repeat;
-
 }
 
 .link-to {
-  /* position: relative;
-  padding: 8px;
-  color: #707070;
-  font-size: 1.125rem;
-  display: block;
-  margin-top: 20px;
-  width: fit-content;
-  word-spacing: 3px;
-  letter-spacing: 3px;
-  transition: all ease-in 0.3s; */
   transform: translateY(-180px);
-  /* z-index: 3;
-  @media (max-width: 767px) {
-    transform: translateY(80px);
-    margin-bottom: 100px;
-    display: none;
-  }
- 
-  &::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    left: 8px;
-    bottom: 0;
-    transition: all ease-in 0.3s;
-  }
-
-  &.purple::after {
-    background: rgb(252, 4, 65);
-    background: -moz-linear-gradient(
-      93deg,
-      rgba(252, 4, 65, 1) 50%,
-      rgba(246, 45, 168, 1) 100%
-    );
-    background: -webkit-linear-gradient(
-      93deg,
-      rgba(252, 4, 65, 1) 50%,
-      rgba(246, 45, 168, 1) 100%
-    );
-    background: linear-gradient(
-      93deg,
-      rgba(252, 4, 65, 1) 50%,
-      rgba(246, 45, 168, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fc0441",endColorstr="#f62da8",GradientType=1);
-  }
-
-  &.dark::after {
-    background: rgb(7, 74, 255);
-    background: -moz-linear-gradient(
-      93deg,
-      rgba(7, 74, 255, 0.5) 50%,
-      rgba(7, 74, 255, 1) 100%
-    );
-    background: -webkit-linear-gradient(
-      93deg,
-      rgba(7, 74, 255, 0.5) 50%,
-      rgba(7, 74, 255, 1) 100%
-    );
-    background: linear-gradient(
-      93deg,
-      rgba(7, 74, 255, 0.5) 50%,
-      rgba(7, 74, 255, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#074aff",endColorstr="#f62da8",GradientType=1);
-  }
-
-  &.white:after {
-    background: #cf755a;
-  }
-
-  &:hover {
-    margin-left: 20px;
-    background-color: #1d212e;
-    border-radius: 10px 10px 0 0;
-
-    &::after {
-      left: 0;
-    }
-  }
-
-  &.white:hover {
-    background-color: #eaefe4;
-  } */
+  z-index: 3;
+  position: relative;
 }
 
 .dots {

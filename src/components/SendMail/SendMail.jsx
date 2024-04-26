@@ -1,7 +1,8 @@
 import { useForm, ValidationError } from "@formspree/react";
 import style from "./send-mail.module.css";
+import applyThemeClass from "../../Services/applyThemeClass.js";
 
-export default function SendMail() {
+export default function SendMail({ theme }) {
   const [state, handleSubmit] = useForm("xbjnpvaz");
 
   return (
@@ -24,7 +25,7 @@ export default function SendMail() {
               <>
                 <h2 className="fw-bolder mb-4">Contact Form</h2>
                 <form onSubmit={handleSubmit}>
-                <div className="from-group mb-3 w-75 mx-auto">
+                  <div className="from-group mb-3 w-md-75 mx-auto">
                     <input
                       type="text"
                       name="name"
@@ -37,7 +38,7 @@ export default function SendMail() {
                       errors={state.errors}
                     />
                   </div>
-                  <div className="from-group mb-3 w-75 mx-auto">
+                  <div className="from-group mb-3 w-md-75 mx-auto">
                     <input
                       type="email"
                       name="email"
@@ -50,7 +51,7 @@ export default function SendMail() {
                       errors={state.errors}
                     />
                   </div>
-                  <div className="from-group mb-3 w-75 mx-auto">
+                  <div className="from-group mb-3 w-md-75 mx-auto">
                     <textarea
                       name="message"
                       placeholder="Your Message"
@@ -62,7 +63,14 @@ export default function SendMail() {
                       errors={state.errors}
                     />
                   </div>
-                  <button type="submit" className="bg-primary text-white fw-bolder border-0 rounded w-50" disabled={state.submitting}>
+                  <button
+                    type="submit"
+                    className={`bg-primary text-white fw-bolder border-0 rounded w-75 w-md-50 ${applyThemeClass(
+                      theme,
+                      style
+                    )}`}
+                    disabled={state.submitting}
+                  >
                     Submit your message
                   </button>
                 </form>

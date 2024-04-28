@@ -5,6 +5,7 @@
   &.purple {
     background-color: #171b29;
   }
+
   &.dark {
     background-color: transparent;
   }
@@ -19,10 +20,11 @@
   }
 }
 
-.theme-btn-purple.white{
+.theme-btn-purple.white {
   background-color: #aec1ba;
 }
-.theme-btn-purple.purple{
+
+.theme-btn-purple.purple {
   background-color: #3a3d49;
 }
 
@@ -46,10 +48,26 @@
   border-radius: 4px 4px 0 0;
   position: relative;
   cursor: pointer;
-  width: calc(100% / 24); 
+  width: calc(100% / 24);
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 767px) {
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9),
+    &:nth-child(10),
+    &:nth-child(11),
+    &:nth-child(12),
+    &:nth-child(19),
+    &:nth-child(20),
+    &:nth-child(21),
+    &:nth-child(22),
+    &:nth-child(23),
+    &:nth-child(24) {
+      display: none;
+    }
+  }
 }
 
 .hour img {
@@ -90,27 +108,25 @@ img.taller {
   rotate: 180deg;
 }
 
-.hourButton:hover, .hourButton img {
+.hourButton:hover,
+.hourButton img {
   pointer-events: none !important;
 }
 
-.rights{
+.rights {
   font-size: 1.25rem;
   color: #707070;
   font-family: "Segoe UI";
   @media (max-width: 575px) {
-  font-size: .8rem;
-    
+    font-size: 0.8rem;
   }
   @media (max-width: 767px) {
-  font-size: 1rem;
-    
+    font-size: 1rem;
   }
 }
 
-.logo{
+.logo {
   height: 40px;
   @media (max-width: 575px) {
-
   }
 }

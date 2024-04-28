@@ -18,9 +18,9 @@ import project4 from "../../assets/images/project-4.jpg";
 import project5 from "../../assets/images/project-5.jpg";
 import project6 from "../../assets/images/project-6.jpg";
 
-import styles from "./projects.module.css";
 import applyThemeClass from "../../Services/applyThemeClass.js";
 import LinkTo from "../LinkTo/LinkTo.jsx";
+import styles from "./projects.module.css";
 
 export default function Projects({ mode }) {
   const [theme, setTheme] = useState();

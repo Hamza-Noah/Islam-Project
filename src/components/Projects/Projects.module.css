@@ -76,7 +76,12 @@
 }
 
 .link-to {
-  transform: translateY(-180px);
+  @media (max-width: 991px) {
+    transform: translateY(50px);
+  }
+  @media (min-width: 992px) {
+    transform: translateY(-180px);
+  }
   z-index: 3;
   position: relative;
 }

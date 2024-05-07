@@ -1,13 +1,16 @@
-.template{
-    padding-top: 30px;
+.template {
+  padding-top: 30px;
 }
 
-.purple{
-    background-color: #171b29;
-
+.white {
+  background-color: #fbf7ea;
 }
 
-.dark{
-    padding-top: 30px;
-    background-color: #000000;
+.purple {
+  background-color: #171b29;
+}
+
+.dark {
+  padding-top: 30px;
+  background-color: #000000;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Skillset from "./components/Skillset";
@@ -11,7 +11,7 @@ import ThemeChanger from "./components/ThemeChanger";
 import "./App.css";
 
 function App() {
-  const [theme, setTheme] = useState("white");
+  const [theme, setTheme] = useState("purple");
 
   const handleThemeChange = (selectedTheme) => {
     setTheme(selectedTheme);

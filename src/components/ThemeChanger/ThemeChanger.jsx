@@ -20,7 +20,6 @@ export default function ThemeChanger(props) {
   const [themeIcon, setThemeIcon] = useState();
   const [logo, setLogo] = useState();
 
-  // Define the icons object here
   const icons = {
     dark: iconDark,
     white: iconWhite,
@@ -78,7 +77,7 @@ export default function ThemeChanger(props) {
   }, [theme]);
 
   useEffect(() => {
-    handleThemeChange("white", 4);
+    handleThemeChange("purple", 4);
   }, []);
 
   return (
